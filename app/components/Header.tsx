@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <div className="fixed max-w-[1223px] w-full">
-      <div className="flex justify-between items-center px-6 py-4 rounded-2xl z-[19999] bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 backdrop-blur-md">
+    <div className="fixed max-w-[1223px] w-full z-10">
+      <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 backdrop-blur-md">
         <Image src="/ade-logo.svg" width={32} height={36} alt="logo" />
         {/* Would make them "click to navigate" later */}
         <ul className="flex gap-12 text-white/25">

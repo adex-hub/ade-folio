@@ -29,9 +29,8 @@ export default function FolioCard({
 
   return (
     <div
-      id="work"
       ref={ref}
-      className={`w-full rounded-[20px] backdrop-blur-md bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] flex gap-10 p-6 -z-10 duration-700 ${
+      className={`w-full rounded-[20px] backdrop-blur-md bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] flex gap-10 p-6 duration-700 ${
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
       }`}
     >
@@ -46,7 +45,6 @@ export default function FolioCard({
         <div className="flex justify-between">
           <h2 className="text-5xl font-bold">{title}</h2>
           <div className="flex gap-4 text-4xl">
-            {/* WOULD FIX PROBLEM WITH LINKS LATER, GOTTA DO SOME INTERSECTION OBSERVERF SHII RN. */}
             <Link
               href={liveLink}
               className="rounded-full bg-icon-radial p-3 hover:bg-red"
