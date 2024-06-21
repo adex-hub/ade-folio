@@ -1,0 +1,11 @@
+.timeline ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 0.9rem;
+}
+
+.timeline ul li::marker {
+  content: "▸ ";
+  color: #ffffff60;
+}

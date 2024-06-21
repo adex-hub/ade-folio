@@ -48,7 +48,12 @@ export default function Hero() {
     <div className="flex h-dvh items-center justify-between">
       {/* I'd figure all the animations and transitions out later */}
       <div className="text w-[60%]">
-        <div className="flex gap-2 mb-6">
+        <motion.div
+          className="flex gap-2 mb-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.1, ease: "easeOut" }}
+        >
           {/* SOME SICK ANIMATION FOR THE HEY, THERE TEXT. LIKE A TORCH LIGHT THAT SHINES THROUGH THE TRANSLUCENT TEXT, MAKING ERRTHING WHITE.*/}
           <p className="text-white/60 text-3xl">Hey, there</p>
           <motion.div
@@ -62,7 +67,7 @@ export default function Hero() {
               alt="hand-waving"
             />
           </motion.div>
-        </div>
+        </motion.div>
         <motion.h1
           className="text-7xl font-bold"
           initial={{ opacity: 0 }}

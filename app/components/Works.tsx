@@ -31,7 +31,7 @@ export default function Works() {
       gitLink: "https://github.com/adex-hub/Yourtodo",
       liveLink: "https://yourtodo-v1.vercel.app/",
       about:
-        "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
+        "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates you when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
       stack: ["react", "javascript", "figma", "sass"],
       img: "/todo.svg",
     },
@@ -54,7 +54,7 @@ export default function Works() {
   const opacity = useTransform(scrollYProgress, [0, 1], [0.8, 0.6]);
 
   return (
-    <div className="flex flex-col gap-10 mb-6 pt-[110px]" id="work">
+    <div className="flex flex-col gap-10 pt-[110px]" id="work">
       {/* title */}
       <motion.h1
         ref={titleRef}
