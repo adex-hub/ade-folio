@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import { Syne } from "next/font/google";
 import TimelineItem from "./TimelineItem";
+import Title from "./Title";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -26,7 +28,7 @@ const TimelineData = [
     jobType: "Internship",
     duration: "July 2023 - Sept. 2023",
     stuffIDid: [
-      "Came up with cross functional login & sign up page designs that are now integral parts of the internal tools used within the company.",
+      "Came up with cross functional login & sign up page designs that are now integral parts of the tools used within the company.",
       "Led a team of fellow interns to design various templates and UI components common in internal applications such as dashboards, notification tabs, multi-step forms, tables with pagination etc. while making very impactful contributions.",
       "I also helped interns grasp the basics of design enabling them to make meaningful contributions.",
     ],
@@ -36,11 +38,7 @@ const TimelineData = [
 export default function Timeline() {
   return (
     <div className="mt-[150px]">
-      <h1
-        className={`text-6xl uppercase ${syne.className} font-bold text-white/80`}
-      >
-        work experience
-      </h1>
+      <Title> Work experience</Title>
 
       {/* THE THING, AFTER WHICH I WOULD DETERMINE THE HEIGHT */}
       <div className="flex mt-6 gap-4 pl-3">

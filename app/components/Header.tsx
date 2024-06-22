@@ -9,10 +9,13 @@ export default function Header() {
         <Image src="/ade-logo.svg" width={32} height={36} alt="logo" />
         {/* Would make them "click to navigate" later */}
         <ul className="flex gap-12 text-white/25">
-          <li className="text-white">Home</li>
+          {/* <li className="text-white">Home</li> */}
+          <Link href="#home" className="text-white">
+            Home
+          </Link>
           <Link href="#work">Work</Link>
-          <li>About</li>
-          <li>Blog</li>
+          <Link href="#about">About</Link>
+          <Link href="#contact">Contact</Link>
         </ul>
         <div className="flex gap-4 text-2xl">
           <Link target="_blank" href="https://linkedin.com/in/adeola-badero">

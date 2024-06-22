@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import FolioCard from "./FolioCard";
 import { Syne } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Title from "./Title";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -46,23 +47,10 @@ export default function Works() {
     },
   ];
 
-  const titleRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: titleRef,
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.8, 0.6]);
-
   return (
     <div className="flex flex-col gap-10 pt-[110px]" id="work">
       {/* title */}
-      <motion.h1
-        ref={titleRef}
-        style={{ opacity }}
-        className={`uppercase ${syne.className} text-6xl font-bold`}
-      >
-        Projects
-      </motion.h1>
+      <Title>Projects</Title>
       {works.map((work, index) => (
         <FolioCard
           key={index}
