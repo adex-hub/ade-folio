@@ -3,14 +3,26 @@ import React from "react";
 import Title from "./Title";
 import Link from "next/link";
 import { Syne } from "next/font/google";
+import { useView } from "@/contexts/ViewContext";
+import { useInView } from "react-intersection-observer";
 
 const syne = Syne({ subsets: ["latin"] });
 
 // LOOK AT THE SKILLS SECTION AGAIN BEFORE GOING LIVE!
 
 export default function About() {
+  const { setSectionInView } = useView();
+
+  const { ref, inView } = useInView({
+    threshold: 0.4,
+    rootMargin: "-100px 0px",
+    // triggerOnce: true,
+  });
+
+  if (inView) setSectionInView("about");
+
   return (
-    <section className="pt-[150px]" id="about">
+    <section ref={ref} className="pt-[150px]" id="about">
       <Title>I amplify brand voices through the web</Title>
       {/* <h1 className={`uppercase ${syne.className} text-6xl font-bold`}>
         I amplify brand voices through the web

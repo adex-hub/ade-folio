@@ -8,11 +8,10 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="max-w-[1223px] mx-auto">
-      <Header />
+    <main>
       <Hero />
       <Works />
-      <Timeline />
+      {/* <Timeline /> */}
       <About />
       <Contact />
       <Footer />

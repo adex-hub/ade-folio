@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { use, useRef } from "react";
 import {
   delay,
   easeIn,
@@ -9,6 +9,8 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useView } from "@/contexts/ViewContext";
 
 export default function Hero() {
   const handWaveAnimation = {
@@ -37,15 +39,28 @@ export default function Hero() {
     },
   };
 
+  const { setSectionInView } = useView();
+
   const imgRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: imgRef,
   });
 
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    rootMargin: "-100px 0px",
+  });
+
+  if (inView) setSectionInView("home");
+
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "-15deg"]);
 
   return (
-    <div className="flex h-dvh items-center justify-between">
+    <section
+      ref={ref}
+      className="flex h-dvh items-center justify-between"
+      id="home"
+    >
       {/* I'd figure all the animations and transitions out later */}
       <div className="text w-[60%]">
         <motion.div
@@ -106,6 +121,6 @@ export default function Hero() {
           className="bg-image-radial px-10 pt-20"
         />
       </motion.div>
-    </div>
+    </section>
   );
 }

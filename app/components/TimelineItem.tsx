@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./TimelineItem.module.css";
+import { useInView } from "react-intersection-observer";
 
 export default function TimelineItem({
   companyImg,
@@ -17,8 +18,19 @@ export default function TimelineItem({
   duration: string;
   stuffIDid: string[];
 }) {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    rootMargin: "-100px 0px",
+    triggerOnce: true,
+  });
+
   return (
-    <div className="flex items-start gap-4 relative">
+    <div
+      ref={ref}
+      className={`flex items-start gap-4 relative duration-1000 ${
+        inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      }`}
+    >
       <Image
         src="/position-icon.svg"
         width={24}

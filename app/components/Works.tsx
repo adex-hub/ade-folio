@@ -4,10 +4,15 @@ import FolioCard from "./FolioCard";
 import { Syne } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Title from "./Title";
+import { useView } from "@/contexts/ViewContext";
+import { useInView } from "react-intersection-observer";
+import Timeline from "./Timeline";
 
 const syne = Syne({ subsets: ["latin"] });
 
 export default function Works() {
+  const { setSectionInView } = useView();
+
   const works = [
     {
       title: "Where in the world",
@@ -47,8 +52,16 @@ export default function Works() {
     },
   ];
 
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    rootMargin: "-100px 0px",
+  });
+
+  // inView && setSectionInView("work");
+  if (inView) setSectionInView("work");
+
   return (
-    <div className="flex flex-col gap-10 pt-[110px]" id="work">
+    <div className="flex flex-col gap-10 pt-[110px]" ref={ref} id="work">
       {/* title */}
       <Title>Projects</Title>
       {works.map((work, index) => (
@@ -62,6 +75,8 @@ export default function Works() {
           stack={work.stack}
         />
       ))}
+
+      <Timeline />
     </div>
   );
 }

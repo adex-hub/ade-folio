@@ -37,7 +37,7 @@ const TimelineData = [
 
 export default function Timeline() {
   return (
-    <div className="mt-[150px]">
+    <div className="mt-[110px]">
       <Title> Work experience</Title>
 
       {/* THE THING, AFTER WHICH I WOULD DETERMINE THE HEIGHT */}
