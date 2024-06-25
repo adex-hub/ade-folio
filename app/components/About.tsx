@@ -24,11 +24,7 @@ export default function About() {
   return (
     <section ref={ref} className="pt-[150px]" id="about">
       <Title>I amplify brand voices through the web</Title>
-      {/* <h1 className={`uppercase ${syne.className} text-6xl font-bold`}>
-        I amplify brand voices through the web
-      </h1> */}
 
-      {/* remainder text */}
       <div className="grid grid-cols-[8.5fr_3.5fr] gap-8 mt-6">
         <div className="grid grid-cols-1 gap-6 text-white/80 text-2xl">
           <p className="leading-[39px]">
@@ -48,7 +44,7 @@ export default function About() {
             Each challenge is unique so I ensure that I learn and grow through
             each one ensuring that I not only put in my best but also deliver
             solutions that businesses are proud to call their own. Wanna learn
-            more? Here&apos;s{" "}
+            more? Here&apos;s <br />
             <Link className="underline" href={"https://drive.google.com"}>
               my résumè
             </Link>

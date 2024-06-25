@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@iconify/react": "^5.0.1",
+    "blobity": "^0.2.3",
     "framer-motion": "^11.2.10",
     "next": "14.2.4",
     "react": "^18",

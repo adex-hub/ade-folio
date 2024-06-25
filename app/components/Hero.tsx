@@ -47,7 +47,7 @@ export default function Hero() {
   });
 
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0.4,
     rootMargin: "-100px 0px",
   });
 
@@ -105,22 +105,26 @@ export default function Hero() {
       </div>
 
       {/* IMAGE */}
-      <motion.div
-        ref={imgRef}
-        style={{ rotate }}
-        className="h-image flex items-center justify-center relative"
-        initial={{ opacity: 0 }}
-        animate={animateIn1}
-      >
-        {/* <div className="bg-white absolute w-[300px] h-[300px] rounded-2xl z-50 mix-blend-screen"></div> */}
-        <Image
-          src="/transparent-ade.png"
-          width={400}
-          height={470}
-          alt="the-trans"
-          className="bg-image-radial px-10 pt-20"
-        />
-      </motion.div>
+      <div data-blobity-tooltip="Soft man">
+        <motion.div
+          ref={imgRef}
+          style={{ rotate }}
+          className="h-image flex items-center justify-center relative"
+          initial={{ opacity: 0 }}
+          animate={animateIn1}
+        >
+          {/* <div className="bg-white absolute w-[300px] h-[300px] rounded-2xl z-50 mix-blend-screen"></div> */}
+          <Image
+            src="/transparent-ade.png"
+            priority
+            width={400}
+            height={470}
+            alt="Ade's picture"
+            // data-blobity-invert="false"
+            className="bg-image-radial px-10 pt-20"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }

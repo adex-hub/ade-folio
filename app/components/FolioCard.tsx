@@ -49,6 +49,9 @@ export default function FolioCard({
               href={liveLink}
               className="rounded-full bg-icon-radial p-3 hover:bg-red"
               target="_blank"
+              aria-label="View Github Repo"
+              data-blobity-radius="34"
+              data-blobity-magnetic="true"
             >
               <Icon icon="line-md:external-link-rounded" />
             </Link>
@@ -56,6 +59,9 @@ export default function FolioCard({
               href={gitLink}
               className="rounded-full bg-icon-radial p-3"
               target="_blank"
+              aria-label="View Live Demo"
+              data-blobity-radius="34"
+              data-blobity-magnetic="true"
             >
               <Icon icon="mingcute:github-line" />
             </Link>
