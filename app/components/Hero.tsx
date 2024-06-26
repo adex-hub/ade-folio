@@ -51,7 +51,7 @@ export default function Hero() {
     rootMargin: "-100px 0px",
   });
 
-  if (inView) setSectionInView("home");
+  if (inView || window.scrollY === 0) setSectionInView("home");
 
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "-15deg"]);
 

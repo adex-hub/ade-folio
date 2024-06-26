@@ -9,6 +9,7 @@
 body {
   background: #08233b;
   color: white;
+  overscroll-behavior: none;
   /* prefers-color-scheme: dark */
 }
 
