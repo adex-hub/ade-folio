@@ -26,7 +26,7 @@ export default function Hero() {
     y: ["1rem", "0px"],
     transition: {
       delay: 1.5,
-      duration: 0.5,
+      duration: 0.7,
       ease: easeIn,
     },
   };

@@ -19,8 +19,8 @@ export default function TimelineItem({
   stuffIDid: string[];
 }) {
   const { ref, inView } = useInView({
-    threshold: 0.3,
-    rootMargin: "-100px 0px",
+    threshold: 0.1,
+    rootMargin: "-60px 0px",
     triggerOnce: true,
   });
 
