@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${kumbhSans.className} max-w-[90%] xl:max-w-[1223px] w-full mx-auto`}
+        className={`${kumbhSans.className} max-w-[90%] xl:max-w-[1223px] w-full mx-auto overflow-x-hidden`}
       >
         <ViewProvider>
           <Header />

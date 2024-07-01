@@ -64,16 +64,19 @@ export default function Hero() {
       {/* I'd figure all the animations and transitions out later */}
       <div className="text sm:w-[60%]">
         <motion.div
-          className="flex gap-2 mb-2 xl:mb-6"
+          className="grid grid-cols-9 w-fit smm:flex gap-2 mb-2 xl:mb-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.1, ease: "easeOut" }}
         >
           {/* SOME SICK ANIMATION FOR THE HEY, THERE TEXT. LIKE A TORCH LIGHT THAT SHINES THROUGH THE TRANSLUCENT TEXT, MAKING ERRTHING WHITE.*/}
-          <p className="text-white/60 text-2xl lg:text-3xl">Hey, there</p>
+          <p className="text-white/60 text-xl smm:text-2xl mb-3 smm:mb-0 lg:text-3xl col-span-6">
+            Hey, there
+          </p>
           <motion.div
             animate={handWaveAnimation}
             style={{ transformOrigin: "bottom right" }}
+            className="col-span-3"
           >
             <Image
               src="/hand-wave.svg"
@@ -84,7 +87,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
         <motion.h1
-          className="text-[40px] md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold"
+          className="text-[32px] smm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold"
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >
@@ -98,7 +101,7 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0 }}
           animate={animateIn2}
-          className="text-white/40 text-2xl lg:text-3xl xl:text-4xl mt-6 "
+          className="text-white/40  text-xl smm:text-2xl lg:text-3xl xl:text-4xl mt-3 smm:mt-6 "
         >
           currently focused on building user experiences that drive growth.
         </motion.p>
@@ -109,7 +112,7 @@ export default function Hero() {
         <motion.div
           ref={imgRef}
           style={{ rotate }}
-          className="h-image flex items-center w-[310px] h-[380px] xl:w-[400px] xl:h-[470px] justify-center relative"
+          className="h-image flex items-center w-[310px] h-[380px] xl:w-[390px] xl:h-[470px] justify-center relative"
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >

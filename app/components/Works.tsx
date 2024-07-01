@@ -61,7 +61,7 @@ export default function Works() {
 
   return (
     <div
-      className="flex flex-col gap-10 pt-20 md:pt-[110px]"
+      className="flex flex-col gap-6 md:gap-10 pt-[110px]"
       ref={ref}
       id="work"
     >

@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb {
 .h-image {
   -webkit-mask-image: url("../public/black.png");
   -webkit-mask-position: center;
-  -webkit-mask-size: 400px 400px;
+  -webkit-mask-size: 390px 390px;
   -webkit-mask-repeat: no-repeat;
   z-index: -10;
   /* transform: rotate(-15deg); */
@@ -46,5 +46,11 @@ body::-webkit-scrollbar-thumb {
 @media (max-width: 1024px) {
   .h-image {
     -webkit-mask-size: 300px 300px;
+  }
+}
+
+@media (max-width: 415px) {
+  .h-image {
+    -webkit-mask-size: 270px 270px;
   }
 }

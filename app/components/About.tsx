@@ -16,7 +16,7 @@ export default function About() {
   const { setSectionInView } = useView();
 
   const { ref, inView } = useInView({
-    threshold: 0.4,
+    threshold: 0.2,
     rootMargin: "-100px 0px",
     // triggerOnce: true,
   });
@@ -24,7 +24,7 @@ export default function About() {
   if (inView) setSectionInView("about");
 
   return (
-    <section ref={ref} className="pt-20 md:pt-[150px]" id="about">
+    <section ref={ref} className="pt-24 md:pt-[150px]" id="about">
       <AnimatedTitle
         wordSpace={"mr-[14px]"}
         charSpace={"mr-[0.001em]"}
