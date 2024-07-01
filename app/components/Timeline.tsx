@@ -14,7 +14,7 @@ const TimelineData = [
     jobType: "Internship",
     duration: "Mar 2024 - Present",
     stuffIDid: [
-      "Developed a fully responsive API marketplace’s sidebars and utilized ChakraUI for context menus, mobile drawer menus, and modals to simplify adding, viewing, updating, and deleting data.",
+      "Developed a fully responsive sidebars for an API marketplace web app utilizing ChakraUI for context menus, mobile drawer menus, and modals to simplify adding, viewing, updating, and deleting data.",
       "Built a reusable table component that reduced code by 15%, improving code efficiency and maintainability.",
       "Collaborated with a senior frontend engineer to develop various application screens, streamlining development and collaboration using GitHub",
       "Worked on a Learning Management System fixing bugs on the frontend while adding and improving features in tandem with the backend developer using Bootsrap and React Bootstrap to streamline component styling.",
@@ -37,7 +37,7 @@ const TimelineData = [
 
 export default function Timeline() {
   return (
-    <div className="mt-[110px]">
+    <div className="mt-10 md:mt-[110px]">
       <Title> Work experience</Title>
 
       {/* THE THING, AFTER WHICH I WOULD DETERMINE THE HEIGHT */}

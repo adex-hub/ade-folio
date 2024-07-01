@@ -9,20 +9,20 @@ export default function Footer() {
   const { setSectionInView } = useView();
 
   return (
-    <div className="my-8 text-lg flex justify-between">
+    <div className="my-6 sm:my-8 text-sm sm:text-base lg:text-lg flex md:justify-between justify-center">
       <p>
-        <span className="text-2xl">&copy;</span> {curYear} . ADEOLA BADERO . ALL
-        RIGHTS RESERVED
+        <span className="text-xl sm:text-2xl">&copy;</span> {curYear} . ADEOLA
+        BADERO . ALL RIGHTS RESERVED
       </p>
       <Link
-        className="flex items-bottom gap-1"
+        className="md:flex hidden items-center gap-1 leading-tight"
         href="#home"
         data-blobity-offset-x="2"
         data-blobity-offset-y="0"
         onClick={() => setSectionInView("home")}
       >
-        <Icon icon="mdi:arrow-top" width={24} height={24} />
-        <p className="underline">SCROLL TO TOP</p>
+        <Icon icon="mdi:arrow-top" className="text-2xl rounded-2xlt" />
+        <p className="underline leading-tight">SCROLL TO TOP</p>
       </Link>
     </div>
   );

@@ -9,8 +9,22 @@
 body {
   background: #08233b;
   color: white;
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   /* prefers-color-scheme: dark */
+}
+
+/* Apply custom scrollbar styles to the entire page */
+body::-webkit-scrollbar {
+  width: 10px;
+  /* background-color: #d9d9d91f; /* Matches the theme */
+  background-color: #333;
+}
+
+/* Style the scrollbar thumb (the draggable part) */
+body::-webkit-scrollbar-thumb {
+  /* background-color: #3c84c7; /* Matches the theme */
+  background-color: #666;
+  border-radius: 5px;
 }
 
 .h-image {
@@ -21,4 +35,16 @@ body {
   z-index: -10;
   /* transform: rotate(-15deg); */
   /* Since I cannot achieve the particular effect I wanted to create, I can make it scroll */
+}
+
+@media (max-width: 1280px) {
+  .h-image {
+    -webkit-mask-size: 300px 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .h-image {
+    -webkit-mask-size: 300px 300px;
+  }
 }

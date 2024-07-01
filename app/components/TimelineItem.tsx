@@ -35,23 +35,28 @@ export default function TimelineItem({
         src="/position-icon.svg"
         width={24}
         height={24}
-        alt="company-image"
-        className="absolute -translate-x-8 left-0"
-        // className=""
+        alt="current"
+        className="absolute -translate-x-[29px] sm:-translate-x-8 left-0"
       />
 
-      <div className="flex items-start gap-4 pl-4">
-        <Image src={companyImg} width={70} height={70} alt="company-image" />
+      <div className="grid grid-cols-5 sm:flex items-start gap-4 pl-4">
+        <Image
+          src={companyImg}
+          width={70}
+          height={70}
+          alt="company-image"
+          className="col-span-1"
+        />
 
         {/* ALL THE TEXT*/}
-        <div className={styles.timeline}>
+        <div className={`${styles.timeline} col-span-4`}>
           <div className="leading-tight">
-            <h1 className="text-[2rem] font-bold">{jobTitle}</h1>
-            <p className="text-lg font-bold my-3">
+            <h1 className="text-2xl sm:text-[2rem] font-bold">{jobTitle}</h1>
+            <p className="text-base sm:text-lg font-bold my-2 sm:my-3">
               {company} | {jobType}
             </p>
           </div>
-          <p className="text-lg text-white/60 my-3">{duration}</p>
+          <p className="text-base sm:text-lg text-white/60 my-3">{duration}</p>
 
           <ul>
             {stuffIDid.map((stuff, index) => (
