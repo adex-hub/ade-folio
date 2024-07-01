@@ -54,12 +54,15 @@ export default function Header() {
               Contact
             </Link>
           </ul>
-          <div className="gap-4 text-2xl hidden sm:flex">
+          <div className="gap-5 text-2xl hidden sm:flex">
             <Link target="_blank" href="https://linkedin.com/in/adeola-badero">
               <Icon icon="hugeicons:linkedin-01" />
             </Link>
             <Link target="_blank" href="https://github.com/adex-hub">
               <Icon icon="hugeicons:github" />
+            </Link>
+            <Link target="_blank" href="https://x.com/Ade_the_great">
+              <Icon icon="akar-icons:x-fill" />
             </Link>
           </div>
         </div>
