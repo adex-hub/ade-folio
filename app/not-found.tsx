@@ -7,9 +7,13 @@ const syne = Syne({ subsets: ["latin"] });
 function NotFound() {
   return (
     <main className="text-center space-y-6">
-      <div className="flex gap-4 pt-[40vh] pb-10 justify-center w-full text-center">
-        <h1 className="text-7xl font-bold">Page not found</h1>
-        <Image src="/pnf.svg" width={72} height={72} alt="remorse" />
+      <div className="grid grid-cols-20 md:flex gap-1 md:gap-4 pt-[40vh] pb-10 justify-center w-full text-center">
+        <h1 className="text-xl col-span-17 md:text-7xl font-bold text-center">
+          Page not found
+        </h1>
+        <div className="relative col-span-3">
+          <Image className="w-fit" src="/pnf.svg" fill alt="remorse" />
+        </div>
       </div>
       <Link
         href="/"
