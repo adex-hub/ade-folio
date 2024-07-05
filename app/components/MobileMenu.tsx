@@ -1,10 +1,14 @@
 import { useView } from "@/contexts/ViewContext";
-import React from "react";
+import React, { SetStateAction } from "react";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { motion } from "framer-motion";
 
-export default function MobileMenu() {
+export default function MobileMenu({
+  onMenuOpen,
+}: {
+  onMenuOpen: React.Dispatch<SetStateAction<boolean>>;
+}) {
   const { sectionInView } = useView();
 
   return (
@@ -14,7 +18,10 @@ export default function MobileMenu() {
       exit={{ opacity: 0 }}
       className="grid  z-10 items-center grid-cols-2 sm:hidden px-6 py-5 fixed top-12 rounded-2xl bg-gradient-to-r from-[#d9d9d91f]  max-w-[90%] w-full to-[#7373731f] mt-12 sm:mt-16 backdrop-blur-md"
     >
-      <ul className="flex flex-col gap-4 lg:gap-12 text-white/25">
+      <ul
+        className="flex flex-col gap-4 lg:gap-12 text-white/25"
+        onClick={() => onMenuOpen(false)}
+      >
         <Link
           href="#home"
           className={`${sectionInView === "home" && "text-white"} w-fit`}
@@ -70,7 +77,6 @@ export default function MobileMenu() {
           </Link>
         </div>
       </div>
-      {/* <div className="w-full h-full absolute z-10 blur-xl backdrop-blur-md"></div> */}
     </motion.div>
   );
 }

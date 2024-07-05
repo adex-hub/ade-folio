@@ -68,7 +68,9 @@ export default function Header() {
         </div>
       </div>
 
-      <AnimatePresence>{menuOpen && <MobileMenu />}</AnimatePresence>
+      <AnimatePresence>
+        {menuOpen && <MobileMenu onMenuOpen={setMenuOpen} />}
+      </AnimatePresence>
     </>
   );
 }

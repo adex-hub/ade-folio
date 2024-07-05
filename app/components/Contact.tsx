@@ -12,16 +12,12 @@ import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
 
 const syne = Syne({ subsets: ["latin"] });
-const EarthCanvas = dynamic(() => import("../components/Earth"), {
-  ssr: false,
-  // loading: () => <CanvasLoader />,
-});
 
-// NA THIS ONE GO TOO GOOD 😉
 export default function Contact() {
   const { setSectionInView } = useView();
   const [viewCount, setViewCount] = useState<number>(0);
   const [formDisplay, setFormDisplay] = useState<boolean>(false);
+  const [messageSent, setMessageSent] = useState<boolean>(false);
 
   const { ref, inView } = useInView({
     threshold: 0.25,
@@ -126,7 +122,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 2 }}
+            transition={{ duration: 1, delay: 0.2 }}
             exit={{ opacity: 0 }}
             style={{
               transform: `${
@@ -137,7 +133,6 @@ export default function Contact() {
             }}
             className="w-full"
           >
-            {/* Form title. */}
             <div className="ml-auto float-right md:absolute right-0 -top-5 text-2xl opacity-50">
               <Icon
                 icon="gg:close"
@@ -148,7 +143,6 @@ export default function Contact() {
                 }}
               />
             </div>
-            {/* Form title ends. */}
             <div className="flex items-center h-full gap-2 w-full">
               <form
                 ref={formRef}
@@ -227,16 +221,12 @@ export default function Contact() {
                     </span>
                   )}
                 </div>
-                {/* MIGHT JUST MAKE THE BUTTON FULL WIDTH ONCE I BRING IN MY 3D MODEL - CAUSE THAT SEEMS TO BE THE BEST COURSE OF ACTION TODAY. */}
                 <button
                   className={`rounded-md bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
                 >
                   Send
                 </button>
               </form>
-              {/* <div className="max-h-[400px] h-full basis-0 grow-[1]"> */}
-              {/* <EarthCanvas /> */}
-              {/* </div> */}
             </div>
           </motion.div>
         </AnimatePresence>
