@@ -56,7 +56,6 @@ body {
 /* CARD ANIMATIONS */
 .card {
   transition: transform 1s;
-  /* transition-delay: 600ms; */
   transform-style: preserve-3d;
 }
 
@@ -68,3 +67,11 @@ body {
 /* .card .back {
   transition: opacity 0.3s ease 1s;
 } */
+
+.custom-toast {
+  background-color: #081e32 !important;
+
+  .Toastify__progress-bar {
+    background-color: #548fba;
+  }
+}
