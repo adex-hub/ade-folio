@@ -3,12 +3,19 @@ import React, { useEffect, useRef, useState } from "react";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
+import { AnimatePresence, motion } from "framer-motion";
 import AnimatedTitle from "./AnimatedTitle";
 import Link from "next/link";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import dynamic from "next/dynamic";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 
 const syne = Syne({ subsets: ["latin"] });
-
-const sections = ["home", "work", "about", "contact"];
+const EarthCanvas = dynamic(() => import("../components/Earth"), {
+  ssr: false,
+  // loading: () => <CanvasLoader />,
+});
 
 // NA THIS ONE GO TOO GOOD 😉
 export default function Contact() {
@@ -29,41 +36,211 @@ export default function Contact() {
     }
   }, [inView, setSectionInView]);
 
-  // This is just for the minimum viable product, we are still gonna make it a full form!
+  const { formState, register, handleSubmit, reset } = useForm();
+  const { errors } = formState;
+
+  // For email.js
+  const formRef = useRef<HTMLFormElement>(null);
+
+  function onSubmit(data: any) {
+    console.log(data);
+
+    emailjs
+      .sendForm(
+        "service_5dvss7r",
+        "template_da88xva",
+        formRef.current as HTMLFormElement,
+        {
+          publicKey: "EHfAyIAZNRsf5W0fm",
+        }
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  }
 
   return (
     <div
       ref={ref}
       id="contact"
-      className={` ${syne.className} mt-12 sm:mt-16 md:mt-[100px] px-6 py-4 md:py-10 lg:py-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f]`}
+      style={{
+        transform: `${
+          formDisplay
+            ? "perspective(300px) rotateY(-180deg)"
+            : "perspective(300px) rotateY(-360deg)"
+        }`,
+      }}
+      className={`overflow-y-hidden card mt-12 sm:mt-16 md:mt-[100px] px-6 py-4 md:py-10 lg:py-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f]`}
     >
-      <div className="inline">
-        <AnimatedTitle
-          wordSpace={"mr-2 md:mr-[12px]"}
-          charSpace={"mr-[0.001em]"}
-          className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold"
-        >
-          GOT A PROJECT IN MIND?
-        </AnimatedTitle>
-        <span
-          data-blobity
-          className="sm:mt-0 text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
-        >
-          CONTACT ME
-        </span>
-      </div>
-      <Link href="mailto:adeola.badero@outlook.com?subject=Let's%20work%20together&amp;body=Lets%20work%20together!&amp;body=Hello%2C%20I%20think%20we%20need%20you%20to%20work%20on%2Fcollaborate%20this%20particular%20product...%20Reach%20out%20as%20soon%20as%20you%20can.">
-        <button
-          className={`text-base ml-auto mt-6 lg:mt-0 lg:ml-0 block sm:hidden lg:block lg:text-2xl font-semibold px-4 py-2 md:px-3 lg:py-4 rounded-xl border-2 border-white leading-none ${
-            viewCount <= 1 && "duration-500 delay-[1500ms]"
-          } ${
-            inView ? " opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+      {!formDisplay ? (
+        <div
+          className={` ${
+            syne.className
+          } flex justify-between items-center w-full duration-1000 ${
+            formDisplay && "opacity-0"
           }`}
-          data-blobity-radius="12"
         >
-          CONTACT ME
-        </button>
-      </Link>
+          <div className="inline w-full">
+            <AnimatedTitle
+              wordSpace={"mr-2 md:mr-[12px]"}
+              charSpace={"mr-[0.001em]"}
+              className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold"
+            >
+              GOT A PROJECT IN MIND?
+            </AnimatedTitle>
+            <span
+              data-blobity
+              onClick={() => {
+                setFormDisplay(!formDisplay);
+              }}
+              className="sm:mt-0 text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
+            >
+              CONTACT ME
+            </span>
+          </div>
+          <Link href="#footer">
+            <button
+              className={`text-base ml-auto mt-6 lg:mt-0 lg:ml-0 block sm:hidden lg:block lg:text-2xl font-semibold px-4 py-2 md:px-3 lg:py-4 rounded-xl border-2 border-white leading-none ${
+                viewCount <= 1 && "duration-500 delay-[1500ms]"
+              } ${
+                inView
+                  ? " opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-16"
+              }`}
+              data-blobity-radius="12"
+              onClick={() => {
+                setFormDisplay(!formDisplay);
+              }}
+            >
+              CONTACT&nbsp;ME
+            </button>
+          </Link>
+        </div>
+      ) : (
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 2 }}
+            exit={{ opacity: 0 }}
+            style={{
+              transform: `${
+                formDisplay
+                  ? "perspective(300px) rotateY(-180deg)"
+                  : "perspective(300px) rotateY(0deg)"
+              }`,
+            }}
+            className="w-full"
+          >
+            {/* Form title. */}
+            <div className="ml-auto float-right md:absolute right-0 -top-5 text-2xl opacity-50">
+              <Icon
+                icon="gg:close"
+                data-blobity
+                onClick={() => {
+                  setFormDisplay(false);
+                  reset();
+                }}
+              />
+            </div>
+            {/* Form title ends. */}
+            <div className="flex items-center h-full gap-2 w-full">
+              <form
+                ref={formRef}
+                onSubmit={handleSubmit(onSubmit)}
+                className={`back w-full flex flex-col gap-3 grow-[2] basis-0`}
+              >
+                <div className="flex gap-1 flex-col">
+                  <label
+                    htmlFor="userName"
+                    className="opacity-70 text-sm lg:text-base "
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="userName"
+                    {...register("userName", {
+                      required: "I need to know your name",
+                      pattern: {
+                        value: /^[a-zA-Z][a-zA-Z0-9]{2,}$/,
+                        message: "Please enter a valid name.",
+                      },
+                    })}
+                    className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                  />
+                  {errors?.userName && (
+                    <span className="text-red-400 text-xs">
+                      {errors?.userName?.message as string}
+                    </span>
+                  )}
+                </div>
+                <div className="flex gap-1 flex-col">
+                  <label
+                    htmlFor="userEmail"
+                    className="opacity-70 text-sm lg:text-base "
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="userEmail"
+                    type="email"
+                    {...register("userEmail", {
+                      required: "Enter a correct email address",
+                      pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: "Please provide a valid email address",
+                      },
+                    })}
+                    className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                  />
+                  {errors?.userEmail && (
+                    <span className="text-red-400 text-xs">
+                      {errors?.userEmail?.message as string}
+                    </span>
+                  )}
+                </div>
+                <div className="flex gap-1 flex-col">
+                  <label
+                    htmlFor="userMessage"
+                    className="opacity-70 text-sm lg:text-base"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="userMessage"
+                    {...register("userMessage", {
+                      required: "I'll appreciate what you have to say.",
+                    })}
+                    rows={4}
+                    cols={50}
+                    className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                  />
+                  {errors?.userMessage && (
+                    <span className="text-red-400 text-xs">
+                      {errors?.userMessage?.message as string}
+                    </span>
+                  )}
+                </div>
+                {/* MIGHT JUST MAKE THE BUTTON FULL WIDTH ONCE I BRING IN MY 3D MODEL - CAUSE THAT SEEMS TO BE THE BEST COURSE OF ACTION TODAY. */}
+                <button
+                  className={`rounded-md bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
+                >
+                  Send
+                </button>
+              </form>
+              {/* <div className="max-h-[400px] h-full basis-0 grow-[1]"> */}
+              {/* <EarthCanvas /> */}
+              {/* </div> */}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      )}
     </div>
   );
 }

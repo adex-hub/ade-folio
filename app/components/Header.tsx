@@ -54,7 +54,7 @@ export default function Header() {
               Contact
             </Link>
           </ul>
-          <div className="gap-5 text-2xl hidden sm:flex">
+          <div className="gap-5 text-xl hidden sm:flex">
             <Link target="_blank" href="https://linkedin.com/in/adeola-badero">
               <Icon icon="hugeicons:linkedin-01" />
             </Link>
