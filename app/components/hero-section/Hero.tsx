@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { use, useRef } from "react";
+import React, { useRef } from "react";
 import {
   delay,
   easeIn,

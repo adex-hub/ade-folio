@@ -1,7 +1,7 @@
 import { useView } from "@/contexts/ViewContext";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 
 const curYear = new Date().getFullYear();
 
@@ -9,7 +9,7 @@ export default function Footer() {
   const { setSectionInView } = useView();
 
   return (
-    <div
+    <section
       id="footer"
       className="my-6 sm:my-8 text-sm sm:text-base lg:text-lg flex md:justify-between justify-center"
     >
@@ -27,6 +27,6 @@ export default function Footer() {
         <Icon icon="mdi:arrow-top" className="text-2xl rounded-2xlt" />
         <p className="underline leading-tight">SCROLL TO TOP</p>
       </Link>
-    </div>
+    </section>
   );
 }

@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import FolioCard from "./FolioCard";
 import { Syne } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Title from "./Title";
+import Title from "../ui/Title";
 import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
 import Timeline from "./Timeline";
@@ -60,7 +60,7 @@ export default function Works() {
   if (inView) setSectionInView("work");
 
   return (
-    <div
+    <section
       className="flex flex-col gap-6 md:gap-10 pt-[110px]"
       ref={ref}
       id="work"
@@ -79,6 +79,6 @@ export default function Works() {
       ))}
 
       <Timeline />
-    </div>
+    </section>
   );
 }

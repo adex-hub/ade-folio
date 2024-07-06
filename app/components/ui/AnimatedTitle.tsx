@@ -3,7 +3,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTitleProps = {
-  children: React.ReactNode;
+  children: string;
   className: string;
   wordSpace: string;
   charSpace: string;
@@ -53,7 +53,7 @@ export default function AnimatedTitle({
   };
 
   return (
-    <h2 aria-label={children} role="heading" className={className}>
+    <h2 role="heading" className={className}>
       {children.split(" ").map((word, index) => {
         return (
           <motion.span

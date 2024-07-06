@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
-import Title from "./Title";
 import Link from "next/link";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
-import AnimatedBody from "./AnimatedBody";
-import AnimatedTitle from "./AnimatedTitle";
+import AnimatedBody from "../ui/AnimatedBody";
+import AnimatedTitle from "../ui/AnimatedTitle";
 
 const syne = Syne({ subsets: ["latin"] });
 

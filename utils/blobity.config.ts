@@ -2,7 +2,6 @@ export const initialBlobityOptions = {
   licenseKey: "opensource",
   focusableElementsOffsetX: 4,
   focusableElementsOffsetY: 4,
-  //   I'mma use peach even though I honestly don't think is a great fit, would work on that later!
   color: "#E3D3BE",
   dotColor: "#08233b",
   // color: "#222222",
@@ -16,6 +15,4 @@ export const initialBlobityOptions = {
   fontColor: "#08233b",
   zIndex: 1000,
   magnetic: true,
-
-  // Other stuff not defined here would happen with their default values
 };

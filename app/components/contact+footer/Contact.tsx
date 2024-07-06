@@ -3,7 +3,7 @@ import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
-import AnimatedTitle from "./AnimatedTitle";
+import AnimatedTitle from "../ui/AnimatedTitle";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useForm } from "react-hook-form";
@@ -81,7 +81,7 @@ export default function Contact() {
 
   return (
     <>
-      <div
+      <section
         ref={ref}
         id="contact"
         style={{
@@ -253,7 +253,7 @@ export default function Contact() {
             </motion.div>
           </AnimatePresence>
         )}
-      </div>
+      </section>
       <ToastContainer />
     </>
   );
