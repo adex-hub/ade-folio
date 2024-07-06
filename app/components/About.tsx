@@ -18,7 +18,6 @@ export default function About() {
   const { ref, inView } = useInView({
     threshold: 0.2,
     rootMargin: "-100px 0px",
-    // triggerOnce: true,
   });
 
   if (inView) setSectionInView("about");
@@ -53,7 +52,12 @@ export default function About() {
             each one ensuring that I not only put in my best but also deliver
             solutions that businesses are proud to call their own. Wanna learn
             more? Here&apos;s <br className="hidden md:block" />
-            <Link className="underline" href={"https://drive.google.com"}>
+            <Link
+              className="underline"
+              href={
+                "https://drive.google.com/file/d/1Rd-IB_5pxsGj4RDtHjEggPB392ND29xB/view?usp=sharing"
+              }
+            >
               my résumè
             </Link>
             .
