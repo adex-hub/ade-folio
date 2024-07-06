@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
@@ -43,11 +42,11 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_5dvss7r",
+        "service_27bqkcc",
         "template_da88xva",
         formRef.current as HTMLFormElement,
         {
-          publicKey: "EHfAyIAZNRsf5W0fm",
+          publicKey: "vJAPgzY8F2Chb72Pt",
         }
       )
       .then(

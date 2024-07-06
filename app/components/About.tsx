@@ -87,8 +87,8 @@ export default function About() {
               UI Libraries
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
-              CSS3/SCSS/SASS, Tailwind CSS, Chakra UI, Framer Motion, GSAP,
-              Bootstrap, ReCharts.
+              CSS3/SCSS/SASS, Tailwind CSS, Styled Components, Chakra UI, Framer
+              Motion, Bootstrap, ReCharts.
             </AnimatedBody>
           </div>
           <div>
