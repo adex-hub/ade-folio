@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
@@ -19,7 +19,9 @@ export default function About() {
     rootMargin: "-100px 0px",
   });
 
-  if (inView) setSectionInView("about");
+  useEffect(() => {
+    if (inView) setSectionInView("about");
+  }, [inView, setSectionInView]);
 
   return (
     <section ref={ref} className="pt-24 md:pt-[150px]" id="about">

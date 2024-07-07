@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
@@ -23,7 +24,9 @@ export default function Contact() {
     rootMargin: "-100px 0px",
   });
 
-  if (inView) setSectionInView("contact");
+  useEffect(() => {
+    if (inView) setSectionInView("contact");
+  }, [inView, setSectionInView]);
 
   useEffect(() => {
     if (inView) {

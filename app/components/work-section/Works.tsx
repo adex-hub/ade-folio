@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import FolioCard from "./FolioCard";
 import { Syne } from "next/font/google";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -57,7 +57,9 @@ export default function Works() {
     rootMargin: "-100px 0px",
   });
 
-  if (inView) setSectionInView("work");
+  useEffect(() => {
+    if (inView) setSectionInView("work");
+  }, [inView, setSectionInView]);
 
   return (
     <section

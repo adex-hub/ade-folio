@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   delay,
   easeIn,
@@ -51,7 +51,9 @@ export default function Hero() {
     rootMargin: "-100px 0px",
   });
 
-  if (inView) setSectionInView("home");
+  useEffect(() => {
+    if (inView) setSectionInView("home");
+  }, [inView, setSectionInView]);
 
   const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "-15deg"]);
 

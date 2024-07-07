@@ -3,7 +3,6 @@ import { createContext, useContext, useState } from "react";
 
 interface ViewContextValue {
   sectionInView: string;
-  // setSectionInView: React.SetStateAction<React.Dispatch<string>>;
   setSectionInView: React.Dispatch<React.SetStateAction<string>>;
 }
 
