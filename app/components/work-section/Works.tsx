@@ -1,14 +1,9 @@
-"use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import FolioCard from "./FolioCard";
-import { Syne } from "next/font/google";
-import { motion, useScroll, useTransform } from "framer-motion";
 import Title from "../ui/Title";
 import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
 import Timeline from "./Timeline";
-
-const syne = Syne({ subsets: ["latin"] });
 
 export default function Works() {
   const { setSectionInView } = useView();

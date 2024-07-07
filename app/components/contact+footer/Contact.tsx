@@ -45,11 +45,11 @@ export default function Contact() {
 
     emailjs
       .sendForm(
-        "service_27bqkcc",
-        "template_da88xva",
+        `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
+        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
         formRef.current as HTMLFormElement,
         {
-          publicKey: "vJAPgzY8F2Chb72Pt",
+          publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`,
         }
       )
       .then(
@@ -65,6 +65,7 @@ export default function Contact() {
             theme: "dark",
             className: `custom-toast font-kumbhSans`,
           });
+          reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -112,7 +113,7 @@ export default function Contact() {
               >
                 GOT A PROJECT IN MIND?
               </AnimatedTitle>
-              <Link href="#footer">
+              <Link href="#footer" data-no-blobity>
                 <span
                   data-blobity
                   onClick={() => {

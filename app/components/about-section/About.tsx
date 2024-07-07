@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from "react";
 import Link from "next/link";
 import { Syne } from "next/font/google";
@@ -8,8 +7,6 @@ import AnimatedBody from "../ui/AnimatedBody";
 import AnimatedTitle from "../ui/AnimatedTitle";
 
 const syne = Syne({ subsets: ["latin"] });
-
-// LOOK AT THE SKILLS SECTION AGAIN BEFORE GOING LIVE!
 
 export default function About() {
   const { setSectionInView } = useView();
