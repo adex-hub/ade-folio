@@ -10,8 +10,7 @@ body {
   background: #08233b;
   color: white;
   overscroll-behavior: none;
-}
-body {
+
   &::-webkit-scrollbar {
     width: 10px;
     /* background-color: #d9d9d91f; /* Matches the theme */
