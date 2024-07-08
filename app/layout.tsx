@@ -41,6 +41,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "Adeola Badero — Frontend Software Engineer",
       },
+      {
+        url: "https://i.ibb.co/Y8hBTR4/ade-800.png",
+        width: 800,
+        height: 800,
+        alt: "Adeola Badero — Frontend Software Engineer",
+      },
     ],
     locale: "en-US",
     type: "website",
