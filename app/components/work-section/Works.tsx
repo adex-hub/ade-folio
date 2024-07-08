@@ -21,7 +21,7 @@ export default function Works() {
     {
       title: "Where in the world",
       gitLink: "https://github.com/adex-hub/where-in-the-world",
-      liveLink: "https://www.where-in-the-world-ade.netlify.app/",
+      liveLink: "https://where-in-the-world-ade.netlify.app/",
       about:
         "A fun tool for checking information about any country in the world such as the country’s native name, currency, population,  border countries etc. It features dynamic routing for each country and theme switch.",
       stack: ["react", "react-router", "javascript", "tailwindcss"],
