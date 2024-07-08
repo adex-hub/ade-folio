@@ -66,6 +66,7 @@ export default function Contact() {
             className: `custom-toast font-kumbhSans`,
           });
           reset();
+          setTimeout(() => setFormDisplay(!formDisplay), 5000);
         },
         (error) => {
           console.log("FAILED...", error.text);
