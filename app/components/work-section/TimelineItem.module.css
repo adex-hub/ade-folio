@@ -3,9 +3,17 @@
   flex-direction: column;
   gap: 1rem;
   padding-left: 0.9rem;
+  position: relative;
 }
 
-.timeline ul li::marker {
+/* .timeline ul li::marker {
   content: "▸ ";
+  color: #ffffff60;
+} */
+
+.timeline ul li::before {
+  content: "▸ ";
+  position: absolute;
+  left: 0;
   color: #ffffff60;
 }
