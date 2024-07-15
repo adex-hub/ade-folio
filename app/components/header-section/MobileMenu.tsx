@@ -50,7 +50,7 @@ export default function MobileMenu({
 
       <div className="flex flex-col gap-3 z-20 items-center justify-center">
         <Link
-          className="p-4 flex-1 flex justify-center w-full rounded-xl h-fit text-4xl visited:bg-[#E3D3BE] bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] backdrop-blur-md"
+          className="p-4 flex-1 flex justify-center w-full rounded-xl h-fit text-4xl visited:bg-[#E3D3BE] bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
           target="_blank"
           href="https://linkedin.com/in/adeola-badero"
           data-blobity-radius="10"
@@ -60,7 +60,7 @@ export default function MobileMenu({
 
         <div className="flex gap-3 w-full">
           <Link
-            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] backdrop-blur-md"
+            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
             target="_blank"
             href="https://github.com/adex-hub"
             data-blobity-radius="10"
@@ -68,7 +68,7 @@ export default function MobileMenu({
             <Icon icon="hugeicons:github" />
           </Link>
           <Link
-            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] backdrop-blur-md"
+            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-gradient-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
             target="_blank"
             href="https://x.com/Ade_the_great"
             data-blobity-radius="10"

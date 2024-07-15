@@ -120,7 +120,7 @@ export default function Hero() {
         >
           {/* <div className="bg-white absolute w-[300px] h-[300px] rounded-2xl z-50 mix-blend-screen"></div> */}
           <Image
-            src="/transparent-ade.png"
+            src="/transparent-ade-min.png"
             priority
             fill
             alt="Ade's picture"
