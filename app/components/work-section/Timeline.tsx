@@ -18,6 +18,7 @@ const TimelineData = [
       "Built a reusable table component that reduced code by 15%, improving code efficiency and maintainability.",
       "Collaborated with a senior frontend engineer to develop various application screens, streamlining development and collaboration using GitHub",
       "Worked on a Learning Management System fixing bugs on the frontend while adding and improving features in tandem with the backend developer using Bootsrap and React Bootstrap to streamline component styling.",
+      "Integrated seven endpoints in the Role Based Access Control (RBAC) module of a Revenue Assurance application ensuring CRUD operations could be easily performed by the admin.",
       "Developed HTML Templates for partner companies including the financial firm KPMG.",
     ],
   },
