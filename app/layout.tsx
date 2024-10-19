@@ -12,7 +12,7 @@ const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Adeola Badero — Frontend Software Engineer",
   description:
-    "Frontend Engineer at Bluechip Technologies, passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
+    "A Frontend Engineer passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
   keywords: [
     "frontend",
     "react",
