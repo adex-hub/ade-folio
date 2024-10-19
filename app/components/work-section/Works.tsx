@@ -10,6 +10,15 @@ export default function Works() {
 
   const works = [
     {
+      title: "Offset Africa",
+      // gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
+      liveLink: "https://offsetcomms.africa/",
+      about:
+        "Offset Communications Africa’s website really allows them to stand out in the PR sector. It shows their works and case studies — highlighting their expertise and educating users about the company philosophy.",
+      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
+      img: "/offset-folio.svg",
+    },
+    {
       title: "Shortly",
       gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
       liveLink: "https://lnk-shortener.netlify.app/",
@@ -27,15 +36,15 @@ export default function Works() {
       stack: ["react", "react-router", "javascript", "tailwindcss"],
       img: "/witw.svg",
     },
-    {
-      title: "Yourtodo",
-      gitLink: "https://github.com/adex-hub/Yourtodo",
-      liveLink: "https://yourtodo-v1.vercel.app/",
-      about:
-        "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates you when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
-      stack: ["react", "javascript", "figma", "sass"],
-      img: "/todo.svg",
-    },
+    // {
+    //   title: "Yourtodo",
+    //   gitLink: "https://github.com/adex-hub/Yourtodo",
+    //   liveLink: "https://yourtodo-v1.vercel.app/",
+    //   about:
+    //     "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates you when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
+    //   stack: ["react", "javascript", "figma", "sass"],
+    //   img: "/todo.svg",
+    // },
     {
       title: "Multi-step form",
       gitLink: "https://github.com/adex-hub/multi-step-form-main",

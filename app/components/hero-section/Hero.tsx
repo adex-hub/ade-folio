@@ -63,7 +63,6 @@ export default function Hero() {
       className="pt-36 sm:pt-0 flex flex-col sm:flex-row h-dvh items-center gap-6 sm:justify-between"
       id="home"
     >
-      {/* I'd figure all the animations and transitions out later */}
       <div className="text sm:w-[60%]">
         <motion.div
           className="grid grid-cols-9 w-fit smm:flex gap-2 mb-2 xl:mb-6"
@@ -71,7 +70,6 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.1, ease: "easeOut" }}
         >
-          {/* SOME SICK ANIMATION FOR THE HEY, THERE TEXT. LIKE A TORCH LIGHT THAT SHINES THROUGH THE TRANSLUCENT TEXT, MAKING ERRTHING WHITE.*/}
           <p className="text-white/60 text-xl smm:text-2xl mb-3 smm:mb-0 lg:text-3xl col-span-6">
             Hey, there
           </p>
@@ -118,7 +116,6 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >
-          {/* <div className="bg-white absolute w-[300px] h-[300px] rounded-2xl z-50 mix-blend-screen"></div> */}
           <Image
             src="/transparent-ade-min.png"
             priority
