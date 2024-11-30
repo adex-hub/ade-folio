@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Tag from "./Tag";
+
+// @ts-ignore
+import "intersection-observer";
 import { useInView } from "react-intersection-observer";
 
 export default function FolioCard({

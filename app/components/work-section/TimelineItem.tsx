@@ -2,6 +2,9 @@
 import Image from "next/image";
 import React from "react";
 import styles from "./TimelineItem.module.css";
+
+// @ts-ignore
+import "intersection-observer";
 import { useInView } from "react-intersection-observer";
 
 export default function TimelineItem({

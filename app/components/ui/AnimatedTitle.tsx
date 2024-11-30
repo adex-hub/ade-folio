@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
+// @ts-ignore
+import "intersection-observer";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTitleProps = {

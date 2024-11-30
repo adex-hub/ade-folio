@@ -2,6 +2,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Syne } from "next/font/google";
 import { useView } from "@/contexts/ViewContext";
+
+// @ts-ignore
+import "intersection-observer";
 import { useInView } from "react-intersection-observer";
 import { AnimatePresence, motion } from "framer-motion";
 import AnimatedTitle from "../ui/AnimatedTitle";
