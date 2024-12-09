@@ -53,3 +53,7 @@ If their any concerns or questions in the user of my work, please reach out to m
 # Feedback
 
 Although I'm currently not accepting PRs (pull requests), I encourage you to reach out to me to share and discuss possible suggestions or improvements that I can make to the site. Say hello on [X/Twitter](https://x.com/Ade_the_great) and let's talk, as your feedback means growth and improvement for this project and for other people who would be inspired by this work to create their portfolios in the future.
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
