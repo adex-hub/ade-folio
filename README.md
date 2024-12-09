@@ -6,12 +6,14 @@ I created this website to showcase my capabilities on the frontend, and to deepe
 
 # Tech Stack
 
-Technologies: React, Next.js, Typescript, Tailwind and Framer Motion <br>
+Technologies: React, Next.js, Typescript, Tailwind, React-hook-form, Email.js and Framer Motion <br>
 Hosting: Netlify
 
 # Gallery
 
-![Portfolio Screenshot](./Screenshot.jpg)<br>
+![Portfolio Screenshot1](./Screenshot.jpg)
+![Portfolio Screenshot2](./Screenshot-1.png)
+![Portfolio Screenshot3](./Screenshot-2.png)
 [View Live Demo](https://adeolabadero.netlify.app)
 
 # Get started
