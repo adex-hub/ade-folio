@@ -32,8 +32,8 @@ export const metadata: Metadata = {
     title: "Adeola Badero — Frontend Software Engineer",
     description:
       "Frontend Engineer at Bluechip Technologies, passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
-    url: "https://www.adeolabadero.vercel.app",
-    siteName: "www.adeolabadero.vercel.app",
+    url: "https://www.adeolabadero.me",
+    siteName: "www.adeolabadero.me",
     images: [
       {
         url: "https://i.ibb.co/FKMqc28/adeola-badero.png",
