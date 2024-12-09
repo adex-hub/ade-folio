@@ -12,8 +12,10 @@ Hosting: Netlify
 # Gallery
 
 ![Portfolio Screenshot1](./Screenshot.jpg)
-![Portfolio Screenshot2](./Screenshot-1.png)
-![Portfolio Screenshot3](./Screenshot-2.png)
+
+<!-- ![Portfolio Screenshot2](./Screenshot-1.png) -->
+
+![Portfolio Screenshot2](./Screenshot-2.png)
 [View Live Demo](https://adeolabadero.netlify.app)
 
 # Get started
