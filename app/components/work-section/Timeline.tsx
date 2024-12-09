@@ -13,7 +13,7 @@ const TimelineData = [
     jobType: "Internship",
     duration: "Mar 2024 - Sept 2024",
     stuffIDid: [
-      "Developed a fully responsive sidebars for an API marketplace web app utilizing ChakraUI for context menus, mobile drawer menus, and modals to simplify adding, viewing, updating, and deleting data.",
+      "Developed fully responsive sidebars for an API marketplace web app utilizing ChakraUI for context menus, mobile drawer menus, and modals to simplify adding, viewing, updating, and deleting data.",
       "Built a reusable table component that reduced code by 15%, improving code efficiency and maintainability.",
       "Collaborated with a senior frontend engineer to develop various application screens, streamlining development and collaboration using GitHub",
       "Worked on a Learning Management System fixing bugs on the frontend while adding and improving features in tandem with the backend developer using Bootsrap and React Bootstrap to streamline component styling.",

@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio Website — v1
 
-## Getting Started
+My name is Adeola Badero, a Frontend Software Engineer & Web designer based in Lagos. I enjoy crafting websites that aid business growth and software that makes lives easier; Honing technology, to better ease lives and improve the world I live in.
 
-First, run the development server:
+I created this website to showcase my capabilities on the frontend, and to deepen my understanding of framer motion. I learnt certain things building this site and by going through the code you stand a chance to learn new things too and better improve your frontend skills.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Tech Stack
+
+Technologies: React, Next.js, Typescript, Tailwind and Framer Motion <br>
+Hosting: Netlify
+
+# Gallery
+
+![Portfolio Screenshot](./Screenshot.jpg)<br>
+[View Live Demo](https://adeolabadero.netlify.app)
+
+# Get started
+
+Clone the project
+
+```
+git clone https://github.com/adex-hub/ade-folio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+cd ade-folio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Contribution and usage
 
-## Deploy on Vercel
+This is an open source project, hence you're welcome to use the code or parts of the code for your own site. When using this project, make tweaks to various components and the theme to really make it your own. Finding it hard to come up with a good color pallete? [Here is a good start!](https://mycolor.space)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+If you're not modifying the design much, credit me as the designer of the website.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If their any concerns or questions in the user of my work, please reach out to me on [X/Twitter](https://x.com/Ade_the_great) or [LinkedIn](https://linkedin.com/in/adeola-badero). I'd be happy to help out as much as I can.
+
+# Feedback
+
+Although I'm currently not accepting PRs (pull requests), I encourage you to reach out to me to share and discuss possible suggestions or improvements that I can make to the site. Say hello on [X/Twitter](https://x.com/Ade_the_great) and let's talk, as your feedback means growth and improvement for this project and for other people who would be inspired by this work to create their portfolios in the future.
