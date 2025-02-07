@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adeola Badero — Frontend Software Engineer",
     description:
-      "Frontend Engineer at Bluechip Technologies, passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
+      "Frontend Engineer formerly at Bluechip Technologies, passionate about crafting next-gen software and creative websites. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
     url: "https://www.adeolabadero.me",
     siteName: "www.adeolabadero.me",
     images: [
