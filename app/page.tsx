@@ -11,7 +11,7 @@ export default function Home() {
   const blobity = useBlobity(initialBlobityOptions);
 
   return (
-    <main className="overflow-x-hidden">
+    <main>
       <Hero />
       <Works />
       <About />
