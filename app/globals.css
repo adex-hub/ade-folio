@@ -1,6 +1,49 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --font-kumbh-sans: Kumbh Sans, sans-serif;
+
+  --background-image-image-radial: radial-gradient(
+    circle,
+    #e3d3be 0%,
+    #e3d6c5 74%,
+    #ddccb8 100%
+  );
+  --background-image-icon-radial: radial-gradient(
+    circle,
+    rgba(217, 217, 217, 0.07) 0%,
+    rgba(217, 217, 217, 0.19) 100%
+  );
+  --background-image-translucent-gradient: linear-gradient(
+    to-right,
+    #d9d9d91f 0%,
+    #7373731f 100%
+  );
+  --background-image-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+
+  --breakpoint-smm: 435px;
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 * {
   scroll-behavior: smooth;

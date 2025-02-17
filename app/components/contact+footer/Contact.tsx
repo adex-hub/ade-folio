@@ -99,7 +99,7 @@ export default function Contact() {
               : "perspective(300px) rotateY(-360deg)"
           }`,
         }}
-        className={`overflow-y-hidden card mt-12 sm:mt-16 md:mt-[100px] px-6 py-4 md:py-10 lg:py-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f]`}
+        className={`overflow-y-hidden card mt-12 sm:mt-16 md:mt-[100px] px-6 py-4 md:py-10 lg:py-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f]`}
       >
         {!formDisplay ? (
           <div
@@ -177,7 +177,7 @@ export default function Contact() {
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit(onSubmit)}
-                  className={`back w-full flex flex-col gap-3 grow-[2] basis-0`}
+                  className={`back w-full flex flex-col gap-3 grow-2 basis-0`}
                 >
                   <div className="flex gap-1 flex-col">
                     <label
@@ -196,7 +196,7 @@ export default function Contact() {
                           message: "Please enter a valid name.",
                         },
                       })}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userName && (
                       <span className="text-red-400 text-xs">
@@ -221,7 +221,7 @@ export default function Contact() {
                           message: "Please provide a valid email address",
                         },
                       })}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userEmail && (
                       <span className="text-red-400 text-xs">
@@ -243,7 +243,7 @@ export default function Contact() {
                       })}
                       rows={4}
                       cols={50}
-                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-none py-1 pl-2"
+                      className="bg-transparent rounded-md border border-[#737373c4] focus:border-[#9f9d9dc4] outline-hidden py-1 pl-2"
                     />
                     {errors?.userMessage && (
                       <span className="text-red-400 text-xs">
@@ -252,7 +252,7 @@ export default function Contact() {
                     )}
                   </div>
                   <button
-                    className={`rounded-md bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
+                    className={`rounded-md bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] py-3 px-5 ${syne.className} font-bold uppercase mt-4`}
                   >
                     Send
                   </button>

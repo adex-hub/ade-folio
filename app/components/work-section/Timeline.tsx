@@ -42,7 +42,7 @@ export default function Timeline() {
 
       {/* THE THING, AFTER WHICH I WOULD DETERMINE THE HEIGHT */}
       <div className="flex mt-6 gap-4 pl-3">
-        <div className="w-3 h-auto bg-gradient-to-b from-white to-transparent" />
+        <div className="w-3 h-auto bg-linear-to-b from-white to-transparent" />
 
         <div className="flex flex-col gap-10">
           {TimelineData.map((item, index) => (
