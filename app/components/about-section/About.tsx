@@ -5,6 +5,7 @@ import { useView } from "@/contexts/ViewContext";
 import { useInView } from "react-intersection-observer";
 import AnimatedBody from "../ui/AnimatedBody";
 import AnimatedTitle from "../ui/AnimatedTitle";
+import ContraButton from "./ContraButton";
 
 const syne = Syne({ subsets: ["latin"] });
 
@@ -29,7 +30,6 @@ export default function About() {
       >
         I amplify brand voices through the web
       </AnimatedTitle>
-
       <div className="grid grid-cols-1 lg:grid-cols-[8.5fr_3.5fr] gap-8 mt-6">
         <div className="grid grid-cols-1 antialiased gap-6 text-white/80 text-xl md:text-2xl">
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
@@ -61,7 +61,6 @@ export default function About() {
             .
           </AnimatedBody>
         </div>
-
         <div className="grid grid-cols-1 gap-4">
           <div>
             <AnimatedTitle
@@ -102,6 +101,9 @@ export default function About() {
             </AnimatedBody>
           </div>
         </div>
+      </div>
+      <div className="mt-10 sm:mt-20 lg:mt-10 mx-auto w-fit">
+        <ContraButton />
       </div>
     </section>
   );
