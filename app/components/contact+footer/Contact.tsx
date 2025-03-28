@@ -99,7 +99,7 @@ export default function Contact() {
               : "perspective(300px) rotateY(-360deg)"
           }`,
         }}
-        className={`overflow-y-hidden card mt-12 sm:mt-16 md:mt-[100px] px-6 py-4 md:py-10 lg:py-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f]`}
+        className={`overflow-y-hidden card mt-12 sm:mt-16 md:mt-[100px] px-6 pb-4 md:pb-10 lg:pb-12 flex flex-col lg:items-center lg:flex-row justify-between rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f]`}
       >
         {!formDisplay ? (
           <div
@@ -113,7 +113,7 @@ export default function Contact() {
               <AnimatedTitle
                 wordSpace={"mr-2 md:mr-[12px]"}
                 charSpace={"mr-[0.001em]"}
-                className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold"
+                className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold pt-4 md:pt-10 lg:pt-12 "
               >
                 GOT A PROJECT IN MIND?
               </AnimatedTitle>
@@ -123,7 +123,7 @@ export default function Contact() {
                   onClick={() => {
                     setFormDisplay(!formDisplay);
                   }}
-                  className="sm:mt-0 text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
+                  className="text-xl sm:text-2xl md:text-[32px] w-fit underline lg:text-[40px] font-bold leading-tight hidden sm:block lg:hidden"
                 >
                   CONTACT ME
                 </span>
@@ -131,7 +131,7 @@ export default function Contact() {
             </div>
             <Link href="#footer">
               <button
-                className={`text-base ml-auto mt-6 lg:mt-0 lg:ml-0 block sm:hidden lg:block lg:text-2xl font-semibold px-4 py-2 md:px-3 lg:py-4 rounded-xl border-2 border-white leading-none ${
+                className={`text-base ml-auto mt-6 lg:ml-0 block sm:hidden lg:block lg:text-2xl font-semibold px-4 py-2 md:px-3 lg:py-4 lg:mt-12 rounded-xl border-2 border-white leading-none ${
                   viewCount <= 1 && "duration-500 delay-[1500ms]"
                 } ${
                   inView
@@ -163,7 +163,14 @@ export default function Contact() {
               }}
               className="w-full"
             >
-              <div className="ml-auto float-right md:absolute right-0 -top-5 text-2xl opacity-50">
+              <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
+                <Link
+                  href="https://cal.com/adeolabadero/30min"
+                  target="_blank"
+                  className={`font-bold uppercase ${syne.className} underline opacity-50`}
+                >
+                  book a call?
+                </Link>
                 <Icon
                   icon="gg:close"
                   data-blobity
@@ -171,6 +178,7 @@ export default function Contact() {
                     setFormDisplay(false);
                     reset();
                   }}
+                  className="text-2xl opacity-50"
                 />
               </div>
               <div className="flex items-center h-full gap-2 w-full">
