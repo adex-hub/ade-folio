@@ -13,13 +13,22 @@ export default function Works() {
 
   const works = [
     {
+      title: "NiJASIT",
+      liveLink: "https://nijasit.bellsuniversity.edu.ng/",
+      about:
+        "I led the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT) journal which was commissioned by the Dean of Bells University of Technology to increase visibility, encourage collaboration, support faculty and student development and ultimately make a positive impact on both the local community and the global engineering field.",
+      stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
+      img: "/nijasit.svg",
+      owner: "Bells Uni",
+    },
+    {
       title: "Offset Africa",
-      // gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
       liveLink: "https://offsetcomms.africa/",
       about:
         "Offset Communications Africa’s website really allows them to stand out in the PR sector. It shows their works and case studies — highlighting their expertise and educating users about the company philosophy.",
       stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
       img: "/offset-folio.svg",
+      owner: "Offset",
     },
     {
       title: "Shortly",
@@ -84,6 +93,7 @@ export default function Works() {
           liveLink={work.liveLink}
           about={work.about}
           stack={work.stack}
+          owner={work.owner}
         />
       ))}
 

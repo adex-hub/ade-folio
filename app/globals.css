@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
   --font-kumbh-sans: Kumbh Sans, sans-serif;
@@ -25,6 +25,10 @@
   );
 
   --breakpoint-smm: 435px;
+
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0 0);
+  --color-base-300: oklch(92% 0 0);
 }
 
 /*
@@ -121,4 +125,29 @@ body {
 .std-backdrop-blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+/* DAISY UI TYPE SKELETON */
+.skeleton {
+  @apply bg-transparent opacity-50 rounded-lg motion-reduce:[transition-duration:15s];
+  will-change: background-position;
+  animation: skeleton 2.6s ease-in-out infinite;
+  background-image: linear-gradient(
+    105deg,
+    #0000 0% 40%,
+    var(--color-base-100) 50%,
+    #0000 60% 100%
+  );
+  background-size: 200% auto;
+  background-repeat: no-repeat;
+  background-position-x: -50%;
+}
+@keyframes skeleton {
+  0% {
+    background-position: 150%;
+  }
+
+  100% {
+    background-position: -50%;
+  }
 }

@@ -14,6 +14,7 @@ export default function FolioCard({
   img,
   gitLink,
   liveLink,
+  owner,
   about,
   stack,
 }: {
@@ -21,6 +22,7 @@ export default function FolioCard({
   title: string;
   gitLink?: string;
   liveLink: string;
+  owner?: string;
   about: string;
   stack: string[];
 }) {
@@ -68,7 +70,7 @@ export default function FolioCard({
               data-blobity-radius="34"
               data-blobity-magnetic="true"
               {...(!gitLink && {
-                "data-blobity-tooltip": "Privately owned by Offset",
+                "data-blobity-tooltip": `Privately owned by ${owner}`,
               })}
             >
               <Icon

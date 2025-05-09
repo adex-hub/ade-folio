@@ -12,7 +12,7 @@ const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Adeola Badero — Frontend Software Engineer",
   description:
-    "A Frontend Engineer passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
+    "Frontend Engineer specializing in React, Next.js, and TypeScript. Creating modern, responsive web experiences with a focus on performance and accessibility. Let's build something amazing together.",
   keywords: [
     "frontend",
     "react",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Adeola Badero — Software Engineer",
     description:
-      "Frontend Engineer at Bluechip Technologies, passionate about crafting next-gen software. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
+      "Frontend Engineer specializing in React, Next.js, and TypeScript. Creating modern, responsive web experiences with a focus on performance and accessibility. Let's build something amazing together.",
     creator: "@Ade_the_great",
     images: ["https://i.ibb.co/FKMqc28/adeola-badero.png"],
   },

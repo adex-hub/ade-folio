@@ -28,15 +28,18 @@ export default function ContraButton() {
   }, []);
 
   return (
+    // <div className="relative" data-blobity>
+    //   <div className="inset-0 absolute skeleton z-20"></div>
     <motion.div
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: isInView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
-      className="contra-hire-me-button"
+      className="contra-hire-me-button z-10 relative"
       data-analyticsuserid="3e30d714-49c6-4a28-b3e1-0b5d524bb9a5"
       data-theme="dark"
       data-username="adeolabadero"
     />
+    // </div>
   );
 }
