@@ -6,11 +6,12 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Header from "./components/header-section/Header";
 import { ViewProvider } from "@/contexts/ViewContext";
+import './globals.css';
 
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adeola Badero — Frontend Software Engineer",
+  title: "Liliana Constantino — Frontend Software Engineer",
   description:
     "Frontend Engineer specializing in React, Next.js, and TypeScript. Creating modern, responsive web experiences with a focus on performance and accessibility. Let's build something amazing together.",
   keywords: [
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     "portfolio",
   ],
   openGraph: {
-    title: "Adeola Badero — Frontend Software Engineer",
+    title: "Liliana Constantino — Frontend Software Engineer",
     description:
       "Frontend Engineer formerly at Bluechip Technologies, passionate about crafting next-gen software and creative websites. I drive growth by crafting user experiences that blend aesthetics with functionality through my design and development skills. I thrive on turning ideas into seamless digital solutions.",
     url: "https://www.adeolabadero.me",
@@ -51,14 +52,7 @@ export const metadata: Metadata = {
     locale: "en-US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Adeola Badero — Software Engineer",
-    description:
-      "Frontend Engineer specializing in React, Next.js, and TypeScript. Creating modern, responsive web experiences with a focus on performance and accessibility. Let's build something amazing together.",
-    creator: "@Ade_the_great",
-    images: ["https://i.ibb.co/FKMqc28/adeola-badero.png"],
-  },
+ 
   robots: {
     index: true,
     follow: true,

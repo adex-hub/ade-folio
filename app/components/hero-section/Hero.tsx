@@ -72,20 +72,20 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.1, ease: "easeOut" }}
         >
-          <p className="text-white/60 text-xl smm:text-2xl mb-3 smm:mb-0 lg:text-3xl col-span-6">
+          {/* <p className="text-white/60 text-xl smm:text-2xl mb-3 smm:mb-0 lg:text-3xl col-span-6">
             Hey, there
-          </p>
+          </p> */}
           <motion.div
-            animate={handWaveAnimation}
-            style={{ transformOrigin: "bottom right" }}
-            className="col-span-3"
+            // animate={handWaveAnimation}
+            // style={{ transformOrigin: "bottom right" }}
+            // className="col-span-3"
           >
-            <Image
+            {/* <Image
               src="/hand-wave.svg"
               width={30}
               height={30}
               alt="hand-waving"
-            />
+            /> */}
           </motion.div>
         </motion.div>
         <motion.h1
@@ -94,10 +94,10 @@ export default function Hero() {
           animate={animateIn1}
         >
           <p className="text-white/60 inline">I&apos;m </p>
-          <span className="bg-linear-to-br bg-clip-text text-transparent from-[#7CC0C4] via-[#548FBA] to-[#3C84C7]">
-            Adeola Badero
+          <span className="bg-linear-to-br bg-clip-text text-transparent from-[#FFB3F2] via-[#FFB3F2] to-[#FFB3F2]">
+            Liliana Constantino
           </span>
-          <p>a Software Engineer</p>
+          <p>a Front-End Web Developer</p>
         </motion.h1>
 
         <motion.p
@@ -105,7 +105,7 @@ export default function Hero() {
           animate={animateIn2}
           className="text-white/40  text-xl smm:text-2xl lg:text-3xl xl:text-4xl mt-3 smm:mt-6 "
         >
-          currently focused on building user experiences that drive growth.
+          {/* currently focused on building user experiences that drive growth. */}
         </motion.p>
       </div>
 
@@ -118,13 +118,13 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={animateIn1}
         >
-          <Image
+          {/* <Image
             src="/transparent-ade-min.png"
             priority
             fill
             alt="Ade's picture"
             className="bg-image-radial px-10 pt-20"
-          />
+          /> */}
         </motion.div>
       </div>
     </section>

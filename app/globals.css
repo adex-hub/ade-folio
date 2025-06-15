@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+/* 
 @theme {
   --font-kumbh-sans: Kumbh Sans, sans-serif;
 
@@ -29,7 +29,7 @@
   --color-base-100: oklch(100% 0 0);
   --color-base-200: oklch(97% 0 0);
   --color-base-300: oklch(92% 0 0);
-}
+} */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -54,32 +54,39 @@
 }
 
 body {
-  background: #08233b;
+  background: linear-gradient(
+    60deg,
+    #FFA6F0,
+    #FFC2F7,
+    #FFD9FA,
+    #ffddf7
+  );
   color: white;
   overscroll-behavior: none;
+  background-size: 400% 400%;
+  /* animation: gradientMove 10s ease infinite; */
+}
 
-  &::-webkit-scrollbar {
+  /* &::-webkit-scrollbar {
     width: 10px;
-    /* background-color: #d9d9d91f; /* Matches the theme */
+    background-color: #d9d9d91f;
     background-color: #333;
   }
 
   &::-webkit-scrollbar-thumb {
-    /* background-color: #3c84c7; /* Matches the theme */
     background-color: #666;
     border-radius: 5px;
-  }
-}
+  } */
 
-.h-image {
+/* .h-image {
   -webkit-mask-image: url("../public/black.png");
   -webkit-mask-position: center;
   -webkit-mask-size: 390px 390px;
   -webkit-mask-repeat: no-repeat;
   z-index: -10;
-  /* transform: rotate(-15deg); */
-  /* Since I cannot achieve the particular effect I wanted to create, I can make it scroll */
-}
+  transform: rotate(-15deg); 
+  /* Since I cannot achieve the particular effect I wanted to create, I can make it scroll  */
+
 
 @media (max-width: 1280px) {
   .h-image {

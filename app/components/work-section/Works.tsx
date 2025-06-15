@@ -12,59 +12,32 @@ export default function Works() {
   const { setSectionInView } = useView();
 
   const works = [
+{
+      title: "spacio",
+      gitLink: "https://github.com/lilianaconstantino/spacio.git",
+      liveLink: "https://spacio.pages.dev/home/",
+      about: 
+        "Spacio integrates Google’s Workspace, allowing users to view the rooms' calendars and book rooms directly. Once a room is booked, the reservation will be reflected on both the user’s Google Calendar and the room’s calendar.",
+      stack: ["react.js", "Apps Script", "JavaScript", "Google Calendar API"], 
+      img: "/spacioImg.png",
+    },
     {
-      title: "NiJASIT",
+      title: "Stripe Report",
+      gitLink: "https://github.com/lilianaconstantino/Stripe_Report_UI.git",
       liveLink: "https://nijasit.bellsuniversity.edu.ng/",
       about:
-        "I led the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT) journal which was commissioned by the Dean of Bells University of Technology to increase visibility, encourage collaboration, support faculty and student development and ultimately make a positive impact on both the local community and the global engineering field.",
-      stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
-      img: "/nijasit.svg",
-      owner: "Bells Uni",
+        "Built an interactive UI for a reporting dashboard with React.js to streamline and consolidate financial records through a downloadable CSV template.",
+      stack: ["react.js", "javascript", "stripe.js", "node.js"],
+      img: "/stripe_report-uiImg.png", 
     },
     {
-      title: "Offset Africa",
-      liveLink: "https://offsetcomms.africa/",
-      about:
-        "Offset Communications Africa’s website really allows them to stand out in the PR sector. It shows their works and case studies — highlighting their expertise and educating users about the company philosophy.",
-      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
-      img: "/offset-folio.svg",
-      owner: "Offset",
-    },
-    {
-      title: "Shortly",
-      gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
+      title: "Nest Meet",
+      gitLink: "https://github.com/lilianaconstantino/Randomized-Scheduler-App.git",
       liveLink: "https://lnk-shortener.netlify.app/",
       about:
-        "A link shortener for a fictional company that effectively shortens links and stores them. No matter how many links you shorten, you can revisit the site anytime to view and manage your previously shortened links.",
-      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
+        "Developed a randomized scheduling application using only frontend technologies (HTML, CSS, and JavaScript). The application allows users to pair interns or group interns from different locations and departments based on customizable rules. It will provide flexibility to include or exclude interns from the schedule with simple selection controls.",
+      stack: ["HTML", "CSS", "JavaScript"],
       img: "/shortly.svg",
-    },
-    {
-      title: "Where in the world",
-      gitLink: "https://github.com/adex-hub/where-in-the-world",
-      liveLink: "https://where-in-the-world-ade.netlify.app/",
-      about:
-        "A fun tool for checking information about any country in the world such as the country’s native name, currency, population,  border countries etc. It features dynamic routing for each country and theme switch.",
-      stack: ["react", "react-router", "javascript", "tailwindcss"],
-      img: "/witw.svg",
-    },
-    // {
-    //   title: "Yourtodo",
-    //   gitLink: "https://github.com/adex-hub/Yourtodo",
-    //   liveLink: "https://yourtodo-v1.vercel.app/",
-    //   about:
-    //     "This task management system lets you customize your name, add, delete, and edit tasks, and celebrates you when tasks are completed. It features built-in notifications and stores data in the browser, allowing you to resume tasks conveniently. Designed and developed by yours truly.",
-    //   stack: ["react", "javascript", "figma", "sass"],
-    //   img: "/todo.svg",
-    // },
-    {
-      title: "Multi-step form",
-      gitLink: "https://github.com/adex-hub/multi-step-form-main",
-      liveLink: "https://ade-loremgaming.netlify.app/",
-      about:
-        "This site features a clean, user-friendly multi-step form for subscribing to a gaming service. Users input personal info, select a plan (monthly or yearly), choose add-ons (online service, larger storage, customizable profile), and review the summary before confirming.",
-      stack: ["html", "sass", "javascript", "ms clarity"],
-      img: "/multistep.svg",
     },
   ];
 
@@ -83,6 +56,7 @@ export default function Works() {
       ref={ref}
       id="work"
     >
+
       <Title>Projects</Title>
       {works.map((work, index) => (
         <FolioCard
@@ -95,6 +69,7 @@ export default function Works() {
           stack={work.stack}
           owner={work.owner}
         />
+        
       ))}
 
       <Timeline />

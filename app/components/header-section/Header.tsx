@@ -55,15 +55,13 @@ export default function Header() {
             </Link>
           </ul>
           <div className="gap-5 text-xl hidden sm:flex">
-            <Link target="_blank" href="https://linkedin.com/in/adeola-badero">
+            <Link target="_blank" href="https://www.linkedin.com/in/liliana-constantino/">
               <Icon icon="hugeicons:linkedin-01" />
             </Link>
             <Link target="_blank" href="https://github.com/adex-hub">
               <Icon icon="hugeicons:github" />
             </Link>
-            <Link target="_blank" href="https://x.com/Ade_the_great">
-              <Icon icon="akar-icons:x-fill" />
-            </Link>
+           
           </div>
         </div>
       </div>
