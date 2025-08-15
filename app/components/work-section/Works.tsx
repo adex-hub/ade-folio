@@ -28,6 +28,15 @@ export default function Works() {
       owner: "Quiklearn",
     },
     {
+      title: "NiJASIT",
+      liveLink: "https://nijasit.bellsuniversity.edu.ng/",
+      about:
+        "Leading the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT)—a journal that aims to showcase African research to the global field and contribute to the world's knowledge base on science and technology—we delivered a fast, SEO-compliant journal that contributes to research on a global scale.",
+      stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
+      img: "/nijasit.svg",
+      owner: "Bells Uni",
+    },
+    {
       title: "Offset Africa",
       liveLink: "https://offsetcomms.africa/",
       about:
@@ -36,15 +45,15 @@ export default function Works() {
       img: "/offset-folio.svg",
       owner: "Offset",
     },
-    {
-      title: "Shortly",
-      gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
-      liveLink: "https://lnk-shortener.netlify.app/",
-      about:
-        "A link shortener for a fictional company that effectively shortens links and stores them. No matter how many links you shorten, you can revisit the site anytime to view and manage your previously shortened links.",
-      stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
-      img: "/shortly.svg",
-    },
+    // {
+    //   title: "Shortly",
+    //   gitLink: "https://github.com/adex-hub/url-shortening-api-landing",
+    //   liveLink: "https://lnk-shortener.netlify.app/",
+    //   about:
+    //     "A link shortener for a fictional company that effectively shortens links and stores them. No matter how many links you shorten, you can revisit the site anytime to view and manage your previously shortened links.",
+    //   stack: ["next.js", "typescript", "framer motion", "tailwindcss"],
+    //   img: "/shortly.svg",
+    // },
     {
       title: "Where in the world",
       gitLink: "https://github.com/adex-hub/where-in-the-world",
@@ -63,15 +72,15 @@ export default function Works() {
     //   stack: ["react", "javascript", "figma", "sass"],
     //   img: "/todo.svg",
     // },
-    {
-      title: "Multi-step form",
-      gitLink: "https://github.com/adex-hub/multi-step-form-main",
-      liveLink: "https://ade-loremgaming.netlify.app/",
-      about:
-        "This site features a clean, user-friendly multi-step form for subscribing to a gaming service. Users input personal info, select a plan (monthly or yearly), choose add-ons (online service, larger storage, customizable profile), and review the summary before confirming.",
-      stack: ["html", "sass", "javascript", "ms clarity"],
-      img: "/multistep.svg",
-    },
+    // {
+    //   title: "Multi-step form",
+    //   gitLink: "https://github.com/adex-hub/multi-step-form-main",
+    //   liveLink: "https://ade-loremgaming.netlify.app/",
+    //   about:
+    //     "This site features a clean, user-friendly multi-step form for subscribing to a gaming service. Users input personal info, select a plan (monthly or yearly), choose add-ons (online service, larger storage, customizable profile), and review the summary before confirming.",
+    //   stack: ["html", "sass", "javascript", "ms clarity"],
+    //   img: "/multistep.svg",
+    // },
   ];
 
   const { ref, inView } = useInView({
