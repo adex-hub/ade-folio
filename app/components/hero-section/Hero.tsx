@@ -1,18 +1,17 @@
 "use client";
-import Image from "next/image";
-import React, { useEffect, useRef } from "react";
 import {
-  delay,
-  easeIn,
   easeInOut,
+  easeOut,
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
 // @ts-ignore
+import { useView } from "@/contexts/ViewContext";
 import "intersection-observer";
 import { useInView } from "react-intersection-observer";
-import { useView } from "@/contexts/ViewContext";
 import ContraButton from "../about-section/ContraButton";
 
 export default function Hero() {
@@ -30,7 +29,7 @@ export default function Hero() {
     transition: {
       delay: 1.5,
       duration: 0.7,
-      ease: easeIn,
+      ease: easeOut,
     },
   };
 
@@ -39,6 +38,14 @@ export default function Hero() {
     transition: {
       ...animateIn1.transition,
       delay: 2,
+    },
+  };
+
+  const animateIn3 = {
+    ...animateIn1,
+    transition: {
+      ...animateIn1.transition,
+      delay: 2.4,
     },
   };
 
@@ -112,9 +119,13 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        <div className="w-fit mx-auto lg:mx-0">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={animateIn3}
+          className="w-fit mx-auto lg:mx-0"
+        >
           <ContraButton />
-        </div>
+        </motion.div>
       </div>
 
       {/* IMAGE */}
