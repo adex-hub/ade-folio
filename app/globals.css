@@ -131,6 +131,8 @@ body {
 .std-backdrop-blur {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  -moz-backdrop-filter: blur(12px);
+  -ms-backdrop-filter: blur(12px);
 }
 
 /* DAISY UI TYPE SKELETON */
