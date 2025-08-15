@@ -1,13 +1,20 @@
 "use client";
 import { useView } from "@/contexts/ViewContext";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import { Icon, loadIcons } from "@iconify/react/dist/iconify.js";
+import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
-import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
+  loadIcons([
+    "gg:close",
+    "lucide:menu",
+    "hugeicons:linkedin-01",
+    "hugeicons:github",
+    "akar-icons:x-fill",
+  ]);
   const { sectionInView } = useView();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
