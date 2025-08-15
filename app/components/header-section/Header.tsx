@@ -4,7 +4,7 @@ import { Icon, loadIcons } from "@iconify/react/dist/iconify.js";
 import { AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
@@ -17,10 +17,39 @@ export default function Header() {
   ]);
   const { sectionInView } = useView();
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        headerRef.current &&
+        !headerRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setMenuOpen(false);
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [menuOpen]);
 
   return (
     <>
-      <div className="fixed max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
+      <div
+        ref={headerRef}
+        className="fixed max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none"
+      >
         <div className="flex justify-between items-center px-6 py-4 rounded-2xl bg-linear-to-r from-[#d9d9d91f] to-[#7373731f] mt-4 sm:mt-8 std-backdrop-blur">
           <Image
             src="/ade-logo.svg"
