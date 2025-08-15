@@ -13,13 +13,19 @@ export default function Works() {
 
   const works = [
     {
-      title: "NiJASIT",
-      liveLink: "https://nijasit.bellsuniversity.edu.ng/",
+      title: "Quiklearn",
+      liveLink: "https://quiklearn.app/",
       about:
-        "I led the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT) journal which was commissioned by the Dean of Bells University of Technology to increase visibility, encourage collaboration, support faculty and student development and ultimately make a positive impact on both the local community and the global engineering field.",
-      stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
-      img: "/nijasit.svg",
-      owner: "Bells Uni",
+        "Starting out as my university final year project, Quiklearn is an AI-powered tool, that creates quizzes and voice-enabled flashcards from course PDFs with a focus on usability and accessibility, this app has served well over twenty-five students helping them to assimilate and retain what they study better.",
+      stack: [
+        "next.js",
+        // "typescript",
+        "daisy ui",
+        "supabase",
+        "artificial intelligence",
+      ],
+      img: "/quiklearn.svg",
+      owner: "Quiklearn",
     },
     {
       title: "Offset Africa",
