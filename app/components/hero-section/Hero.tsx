@@ -122,7 +122,7 @@ export default function Hero() {
         <motion.div
           ref={imgRef}
           style={{
-            rotate: window.innerWidth >= 1024 ? rotate : "0deg",
+            rotate: rotate,
           }}
           className="h-image flex items-center w-[310px] h-[380px] xl:w-[390px] xl:h-[470px] justify-center relative"
           initial={{ opacity: 0 }}
