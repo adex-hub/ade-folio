@@ -29,7 +29,7 @@ export default function Works() {
     },
     {
       title: "NiJASIT",
-      liveLink: "https://nijasit.bellsuniversity.edu.ng/",
+      liveLink: "https://nijasit.vercel.app/",
       about:
         "Leading the development efforts of the Nigerian Journal of Applied Science and Innovative Technology (NiJASIT)—a journal that aims to showcase African research to the global field and contribute to the world's knowledge base on science and technology—we delivered a fast, SEO-compliant journal that contributes to research on a global scale.",
       stack: ["next.js", "javascript", "shadcn ui", "tailwindcss"],
