@@ -16,7 +16,7 @@ export default function MobileMenu({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="grid  z-10 items-center grid-cols-2 sm:hidden px-6 py-5 fixed top-12 rounded-2xl bg-linear-to-r from-[#d9d9d91f]  max-w-[90%] w-full to-[#7373731f] mt-12 sm:mt-16 std-backdrop-blur"
+      className="grid  z-10 items-center grid-cols-2 sm:hidden px-6 py-5 fixed top-12 rounded-2xl bg-linear-to-r from-[#d9d9d91f]  max-w-[90%] w-full to-[#7373731f] mt-12 sm:mt-16 std-backdrop-blur backdrop-blur-md"
     >
       <ul
         className="flex flex-col gap-4 lg:gap-12 text-white/25"
@@ -50,7 +50,7 @@ export default function MobileMenu({
 
       <div className="flex flex-col gap-3 z-20 items-center justify-center">
         <Link
-          className="p-4 flex-1 flex justify-center w-full rounded-xl h-fit text-4xl visited:bg-[#E3D3BE] bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
+          className="p-4 flex-1 flex justify-center w-full rounded-xl h-fit text-4xl visited:bg-[#E3D3BE] bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur backdrop-blur-md"
           target="_blank"
           href="https://linkedin.com/in/adeola-badero"
           data-blobity-radius="10"
@@ -60,7 +60,7 @@ export default function MobileMenu({
 
         <div className="flex gap-3 w-full">
           <Link
-            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
+            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur backdrop-blur-md"
             target="_blank"
             href="https://github.com/adex-hub"
             data-blobity-radius="10"
@@ -68,7 +68,7 @@ export default function MobileMenu({
             <Icon icon="hugeicons:github" />
           </Link>
           <Link
-            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur"
+            className="p-4 flex justify-center w-full rounded-xl h-fit text-2xl bg-linear-to-r from-[#d9d9d915] to-[#7373731f] std-backdrop-blur backdrop-blur-md"
             target="_blank"
             href="https://x.com/Ade_the_great"
             data-blobity-radius="10"
