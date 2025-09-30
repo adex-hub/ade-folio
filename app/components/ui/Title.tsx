@@ -15,7 +15,7 @@ export default function Title({ children }: { children: React.ReactNode }) {
   return (
     <motion.h1
       ref={titleRef}
-      style={{ opacity }}
+      style={{ color: "#FFB3F2" }}
       className={`uppercase ${syne.className} text-4xl md:text-5xl xl:text-6xl font-bold`}
     >
       {children}

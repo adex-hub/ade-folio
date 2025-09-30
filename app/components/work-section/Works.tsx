@@ -30,15 +30,6 @@ export default function Works() {
       stack: ["react.js", "javascript", "stripe.js", "node.js"],
       img: "/stripe_report-uiImg.png", 
     },
-    {
-      title: "Nest Meet",
-      gitLink: "https://github.com/lilianaconstantino/Randomized-Scheduler-App.git",
-      liveLink: "https://lnk-shortener.netlify.app/",
-      about:
-        "Developed a randomized scheduling application using only frontend technologies (HTML, CSS, and JavaScript). The application allows users to pair interns or group interns from different locations and departments based on customizable rules. It will provide flexibility to include or exclude interns from the schedule with simple selection controls.",
-      stack: ["HTML", "CSS", "JavaScript"],
-      img: "/shortly.svg",
-    },
   ];
 
   const { ref, inView } = useInView({

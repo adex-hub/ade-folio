@@ -54,16 +54,13 @@
 }
 
 body {
-  background: linear-gradient(
-    60deg,
-    #FFA6F0,
-    #FFC2F7,
-    #FFD9FA,
-    #ffddf7
+  background-image: linear-gradient(
+    to top,
+    black
   );
   color: white;
   overscroll-behavior: none;
-  background-size: 400% 400%;
+  /* background-size: 400% 400%; */
   /* animation: gradientMove 10s ease infinite; */
 }
 

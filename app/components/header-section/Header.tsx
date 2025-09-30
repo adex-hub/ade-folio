@@ -22,11 +22,6 @@ export default function Header() {
             alt="logo"
             className="select-none"
           />
-          <Icon
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="cursor-pointer flex sm:hidden text-2xl"
-            icon={`${menuOpen ? "gg:close" : "lucide:menu"}`}
-          />
 
           <ul className="hidden sm:flex gap-8 lg:gap-12 text-white/25">
             <Link
@@ -39,7 +34,7 @@ export default function Header() {
               href="#work"
               className={`${sectionInView === "work" && "text-white"} `}
             >
-              Work
+              Experience
             </Link>
             <Link
               href="#about"
@@ -58,7 +53,7 @@ export default function Header() {
             <Link target="_blank" href="https://www.linkedin.com/in/liliana-constantino/">
               <Icon icon="hugeicons:linkedin-01" />
             </Link>
-            <Link target="_blank" href="https://github.com/adex-hub">
+            <Link target="_blank" href="https://github.com/lilianaconstantino">
               <Icon icon="hugeicons:github" />
             </Link>
            

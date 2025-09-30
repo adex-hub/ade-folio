@@ -11,12 +11,14 @@ type AnimatedTitleProps = {
   wordSpace: string;
   charSpace: string;
   delay?: number;
+  style?: React.CSSProperties; 
 };
 
 export default function AnimatedTitle({
   children,
   className,
   wordSpace,
+  style = {},
   charSpace,
 }: AnimatedTitleProps) {
   const ctrls = useAnimation();
@@ -56,7 +58,7 @@ export default function AnimatedTitle({
   };
 
   return (
-    <h2 role="heading" className={className}>
+    <h2 role="heading" className={className} style={style}>
       {children.split(" ").map((word, index) => {
         return (
           <motion.span

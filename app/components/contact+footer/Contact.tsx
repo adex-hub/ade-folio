@@ -11,7 +11,6 @@ import AnimatedTitle from "../ui/AnimatedTitle";
 import Link from "next/link";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -40,52 +39,25 @@ export default function Contact() {
   const { formState, register, handleSubmit, reset } = useForm();
   const { errors } = formState;
 
-  // For email.js
-  const formRef = useRef<HTMLFormElement>(null);
+async function onSubmit(data: any) {
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-  function onSubmit(data: any) {
-    console.log(data);
-
-    emailjs
-      .sendForm(
-        `${process.env.NEXT_PUBLIC_SERVICE_ID}`,
-        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
-        formRef.current as HTMLFormElement,
-        {
-          publicKey: `${process.env.NEXT_PUBLIC_PUBLIC_KEY}`,
-        }
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          toast.success("Message sent", {
-            position: "bottom-left",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-            className: `custom-toast font-kumbhSans`,
-          });
-          reset();
-          setTimeout(() => setFormDisplay(!formDisplay), 5000);
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-          toast.error("Message not sent, check your network", {
-            position: "bottom-left",
-            autoClose: 3000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            theme: "dark",
-            className: `custom-toast font-kumbhSans`,
-          });
-        }
-      );
+    if (res.ok) {
+      toast.success("Message sent!");
+      reset();
+      setTimeout(() => setFormDisplay(!formDisplay), 5000);
+    } else {
+      toast.error("Message not sent, try again.");
+    }
+  } catch (err) {
+    toast.error("Network error, try again later.");
   }
+}
 
   return (
     <>
@@ -110,13 +82,6 @@ export default function Contact() {
             }`}
           >
             <div className="inline w-full">
-              <AnimatedTitle
-                wordSpace={"mr-2 md:mr-[12px]"}
-                charSpace={"mr-[0.001em]"}
-                className="text-xl sm:text-2xl md:text-[32px] lg:text-[40px] font-bold pt-4 md:pt-10 lg:pt-12 "
-              >
-                GOT A PROJECT IN MIND?
-              </AnimatedTitle>
               <Link href="#footer" data-no-blobity>
                 <span
                   data-blobity
@@ -164,13 +129,7 @@ export default function Contact() {
               className="w-full"
             >
               <div className="flex items-center justify-between py-4 md:py-5 lg:py-6">
-                <Link
-                  href="https://cal.com/adeolabadero/30min"
-                  target="_blank"
-                  className={`font-bold uppercase ${syne.className} underline opacity-50`}
-                >
-                  book a call?
-                </Link>
+                
                 <Icon
                   icon="gg:close"
                   data-blobity
@@ -183,7 +142,6 @@ export default function Contact() {
               </div>
               <div className="flex items-center h-full gap-2 w-full">
                 <form
-                  ref={formRef}
                   onSubmit={handleSubmit(onSubmit)}
                   className={`back w-full flex flex-col gap-3 grow-2 basis-0`}
                 >

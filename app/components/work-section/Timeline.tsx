@@ -7,30 +7,15 @@ const syne = Syne({ subsets: ["latin"] });
 
 const TimelineData = [
   {
-    companyImg: "/bluechip.svg",
-    jobTitle: "Software Engineer",
-    company: "Bluechip Technologies",
+    companyImg: "/digitalnestlogo.jpg",
+    jobTitle: "Web Development",
+    company: "Digital Nest",
     jobType: "Internship",
-    duration: "Mar 2024 - Sept 2024",
+    duration: "Aug. 2024 - Present",
     stuffIDid: [
-      "Developed fully responsive sidebars for an API marketplace web app utilizing ChakraUI for context menus, mobile drawer menus, and modals to simplify adding, viewing, updating, and deleting data.",
-      "Built a reusable table component that reduced code by 15%, improving code efficiency and maintainability.",
-      "Collaborated with a senior frontend engineer to develop various application screens, streamlining development and collaboration using GitHub",
-      "Worked on a Learning Management System fixing bugs on the frontend while adding and improving features in tandem with the backend developer using Bootsrap and React Bootstrap to streamline component styling.",
-      "Integrated seven endpoints in the Role Based Access Control (RBAC) module of a Revenue Assurance application ensuring CRUD operations could be easily performed by the admin.",
-      "Developed HTML Templates for partner companies including the financial firm KPMG.",
-    ],
-  },
-  {
-    companyImg: "/nnpc.svg",
-    jobTitle: "Intern",
-    company: "NNPC",
-    jobType: "Internship",
-    duration: "July 2023 - Sept. 2023",
-    stuffIDid: [
-      "Came up with cross functional login & sign up page designs that are now integral parts of the tools used within the company.",
-      "Led a team of fellow interns to design various templates and UI components common in internal applications such as dashboards, notification tabs, multi-step forms, tables with pagination etc. while making very impactful contributions.",
-      "I also helped interns grasp the basics of design enabling them to make meaningful contributions.",
+      "Developed 3+ responsive websites for clients using HTML, CSS, JavaScript, PHP, and WordPress to improve website design and increase user engagement.",
+      "Collaborated with a cross-functional team of developers and designers to deliver high-quality code and projects in an agile environment, contributing to 100% on-time sprint delivery.",
+      "Created internal projects that enhance the work environment, such as the Salinas Bizznest Scheduler, which pairs interns, and a Google add-on that facilitates room reservations in the office."
     ],
   },
 ];
@@ -38,7 +23,7 @@ const TimelineData = [
 export default function Timeline() {
   return (
     <div className="mt-10 md:mt-[110px]">
-      <Title> Work experience</Title>
+      <Title> Experience</Title>
 
       {/* THE THING, AFTER WHICH I WOULD DETERMINE THE HEIGHT */}
       <div className="flex mt-6 gap-4 pl-3">
