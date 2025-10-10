@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import FolioCard from "./FolioCard";
-import Title from "../ui/Title";
 import { useView } from "@/contexts/ViewContext";
 
 // @ts-ignore
@@ -43,12 +42,12 @@ export default function Works() {
 
   return (
     <section
-      className="flex flex-col gap-6 md:gap-10 pt-[110px]"
+      className="font-ekamai flex flex-col gap-6 md:gap-10 pt-[110px] text-[#FCC6BB]"
       ref={ref}
       id="work"
     >
 
-      <Title>Projects</Title>
+     <h2 className="font-ekamai text-[45px] smm:text-[40px] md:text-5xl lg:text-6xl xl:text-7xl leading-tight text-[#C1E899]">PROJECTS</h2>
       {works.map((work, index) => (
         <FolioCard
           key={index}

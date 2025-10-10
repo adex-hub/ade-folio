@@ -36,6 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 #gmail 
-GMAIL_USER=constantinolilianam@gmail.com
-GMAIL_APP_PASSWORD=irdfnzwkdvtppeyk
+
 
