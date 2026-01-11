@@ -55,6 +55,7 @@ export default function About() {
             experience. For a detailed overview of my skills and experience,{" "}
             <Link
               className="underline"
+              target="_blank"
               href={
                 "https://drive.google.com/file/d/1GF08VxFYAi7fPX7fj9bayN_m0EltFlLy/view?usp=sharing"
               }
