@@ -28,37 +28,39 @@ export default function About() {
         charSpace={"mr-[0.001em]"}
         className={`uppercase ${syne.className} antialiased text-4xl md:text-5xl xl:text-6xl font-bold opacity-80`}
       >
-        I amplify brand voices through the web
+        {/* I amplify brand voices through the web */}I bridge the gap between
+        hi-fi design & performant engineering
       </AnimatedTitle>
       <div className="grid grid-cols-1 lg:grid-cols-[8.5fr_3.5fr] gap-8 mt-6">
         <div className="grid grid-cols-1 antialiased gap-6 text-white/80 text-xl md:text-2xl">
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
-            My passion lies in creating strong business solutions that aid
-            business growth. Whether it&apos;s a website to boost brand
-            publicity or software solutions that streamline otherwise manual
-            processes, I love taking brands from point A to the their dreamy
-            point B and iteratively improve as time goes on.
+            I am a Design Engineer who thrives at the intersection of aesthetic
+            precision and high-performance engineering. As a Frontend Engineer
+            at Vobb, I build scalable, type-safe applications that translate
+            complex Figma designs into modular, performant codebases. Beyond
+            building to spec, I think critically about how users interact with
+            data to ensure each experience delivers measurable business value.
           </AnimatedBody>
           <AnimatedBody className="leading-[34px] md:leading-[39px]">
-            From writing my first lines of code back in late 2019 to this point
-            I have continually refined my development skills overtime picking up
-            UI/UX design on the way & solving complex challenges increasing the
-            complexity as time goes by to ensure improvement.
+            Since 2019, I’ve grown from writing code to leading architecture for
+            platforms used by hundreds of users. I’ve delivered systems like
+            NiJASIT and optimized legacy pipelines at Vobb for a 95% performance
+            gain. I specialize in React, Next.js, and TypeScript, building
+            scalable, resilient web applications.
           </AnimatedBody>
           <AnimatedBody className="inline leading-[34px] md:leading-[39px]">
-            Each challenge is unique so I ensure that I learn and grow through
-            each one ensuring that I not only put in my best but also deliver
-            solutions that businesses are proud to call their own. Wanna learn
-            more? Here&apos;s <br className="hidden md:block" />
+            My focus is on the technical rigor required to move a product from
+            design to production. I engineer maintainable, type-safe systems
+            that handle high-volume data without compromising the user
+            experience. For a detailed overview of my skills and experience,{" "}
             <Link
               className="underline"
               href={
                 "https://drive.google.com/file/d/1GF08VxFYAi7fPX7fj9bayN_m0EltFlLy/view?usp=sharing"
               }
             >
-              my résumè
+              view my résumé here.
             </Link>
-            .
           </AnimatedBody>
         </div>
         <div className="grid grid-cols-1 gap-4">
@@ -72,7 +74,8 @@ export default function About() {
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
               JavaScript(ES6+), React, Next.js, TypeScript, Redux, Redux
-              Toolkit, React Query, HTML5, Git/GitHub, React Hook Form, Formik.
+              Toolkit, React Query, HTML5, Git/GitHub, React Hook Form, Vitest,
+              Jest.
             </AnimatedBody>
           </div>
           <div>
@@ -84,8 +87,8 @@ export default function About() {
               UI Libraries
             </AnimatedTitle>
             <AnimatedBody className="text-white/60 text-base md:text-xl leading-8">
-              CSS3/SCSS/SASS, Tailwind CSS, Styled Components, Chakra UI, Framer
-              Motion, Bootstrap, ReCharts.
+              CSS3/SCSS/SASS, Tailwind CSS, Motion (for react), GSAP, Bootstrap,
+              ReCharts.
             </AnimatedBody>
           </div>
           <div>
