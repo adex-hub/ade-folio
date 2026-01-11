@@ -81,7 +81,7 @@ export default function FolioCard({
           </div>
         </div>
         <p className="text-base text-white/70">{about}</p>
-        <div className="flex gap-3 md:gap-4 flex-wrap">
+        <div className="flex gap-x-3 gap-y-1.5 flex-wrap">
           {stack.map((tech, index) => (
             <Tag key={index}>{tech}</Tag>
           ))}

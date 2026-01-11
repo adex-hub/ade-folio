@@ -16,14 +16,8 @@ export default function Works() {
       title: "Quiklearn",
       liveLink: "https://quiklearn.app/",
       about:
-        "Starting out as my university final year project, Quiklearn is an AI-powered tool, that creates quizzes and voice-enabled flashcards from course PDFs with a focus on usability and accessibility. This app has served well over twenty-five students helping them to assimilate and retain what they study better.",
-      stack: [
-        "next.js",
-        // "typescript",
-        "daisy ui",
-        "supabase",
-        "artificial intelligence",
-      ],
+        "Starting out as my university final year project, Quiklearn is an AI-powered tool, that creates quizzes and voice-enabled flashcards from course PDFs with a focus on usability and accessibility. This app has served well over 200+ students helping them to assimilate and retain what they study better.",
+      stack: ["next.js", "typescript", "daisy ui", "supabase", "gemini api"],
       img: "/quiklearn.svg",
       owner: "Quiklearn",
     },

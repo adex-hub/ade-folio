@@ -7,6 +7,19 @@ const syne = Syne({ subsets: ["latin"] });
 
 const TimelineData = [
   {
+    companyImg: "/vobb.svg",
+    jobTitle: "Frontend Engineer",
+    company: "Vobb",
+    jobType: "Full-time",
+    duration: "Sept 2025 - Present",
+    stuffIDid: [
+      "Engineered a polymorphic reassignment modal to handle CRM clients and sales deals during pipeline stage deletions, preventing critical data loss and reduced support tickets by 40%",
+      "Refactored a core dropdown component by extending react-select to support paginated infinite-scrolling which reduced initial payload size by 67% and optimized interaction responsiveness for high-volume datasets.",
+      "Re-engineered legacy Kanban pipeline UI to consume a Kanban-optimized API data structure and implemented optimistic UI updates to resolve state-sync ”snapping” bugs—delivering a 95% improvement in board performance and an 83% increase in perceived responsiveness.",
+      "Authored comprehensive 1,330-line test suite for the usePipelineStages hook covering complex state management, drag-and-drop stage reordering, and bidirectional transition logic with extensive edge case coverage—establishing reliable foundations for core sales pipeline functionality throughout the application.",
+    ],
+  },
+  {
     companyImg: "/bluechip.svg",
     jobTitle: "Software Engineer",
     company: "Bluechip Technologies",

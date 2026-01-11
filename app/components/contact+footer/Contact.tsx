@@ -132,7 +132,7 @@ export default function Contact() {
             <Link href="#footer">
               <button
                 className={`text-base ml-auto mt-6 lg:ml-0 block sm:hidden lg:block lg:text-2xl font-semibold px-4 py-2 md:px-3 lg:py-4 lg:mt-12 rounded-xl border-2 border-white leading-none ${
-                  viewCount <= 1 && "duration-500 delay-[1500ms]"
+                  viewCount <= 1 && "duration-500 delay-[1200ms]"
                 } ${
                   inView
                     ? " opacity-100 translate-y-0"
