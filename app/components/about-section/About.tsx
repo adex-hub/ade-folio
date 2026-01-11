@@ -53,7 +53,7 @@ export default function About() {
             <Link
               className="underline"
               href={
-                "https://drive.google.com/file/d/1Rd-IB_5pxsGj4RDtHjEggPB392ND29xB/view?usp=sharing"
+                "https://drive.google.com/file/d/1GF08VxFYAi7fPX7fj9bayN_m0EltFlLy/view?usp=sharing"
               }
             >
               my résumè
